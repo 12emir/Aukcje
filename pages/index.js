@@ -7,7 +7,7 @@ export default function Index() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
+    fetch("https://jsonplaceholder.typicode.com/posts", { mode: "cors" })
       .then((response) => {
         return response.json();
       })
