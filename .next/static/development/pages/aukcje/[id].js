@@ -7168,7 +7168,9 @@ var Auction = function Auction() {
 
   var tl = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline();
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    fetch("https://jsonplaceholder.typicode.com/posts/1").then(function (response) {
+    fetch("https://jsonplaceholder.typicode.com/posts/1", {
+      mode: "cors"
+    }).then(function (response) {
       return response.json();
     }).then(function (json) {
       setSingle(json);
@@ -7244,7 +7246,7 @@ var Auction = function Auction() {
 
 /***/ }),
 
-/***/ 4:
+/***/ 2:
 /*!**************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Faukcje%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fkozakiewicz%2FDesktop%2Faukcje-app%2Fpages%2Faukcje%2F%5Bid%5D.js ***!
   \**************************************************************************************************************************************************************/
@@ -7267,5 +7269,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[id].js.map

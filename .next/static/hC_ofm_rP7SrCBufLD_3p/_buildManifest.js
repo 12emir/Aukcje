@@ -1,1 +1,0 @@
-self.__BUILD_MANIFEST = (function(a){return {"/":[a],"/aukcje/[id]":[a],"/index":[a]}}("static\u002Fchunks\u002Ff655c950e7d6920924a6ae46c0a95895fb931a5d.687a212ebd4c9278c5a0.js"));self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()

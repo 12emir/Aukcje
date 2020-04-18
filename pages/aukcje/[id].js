@@ -7,7 +7,7 @@ const Auction = () => {
   var tl = gsap.timeline();
 
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/posts/1`)
+    fetch(`https://jsonplaceholder.typicode.com/posts/1`, { mode: "cors" })
       .then((response) => {
         return response.json();
       })

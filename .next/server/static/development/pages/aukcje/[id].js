@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -281,7 +281,9 @@ const Auction = () => {
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({});
   var tl = gsap__WEBPACK_IMPORTED_MODULE_1___default.a.timeline();
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    fetch(`https://jsonplaceholder.typicode.com/posts/1`).then(response => {
+    fetch(`https://jsonplaceholder.typicode.com/posts/1`, {
+      mode: "cors"
+    }).then(response => {
       return response.json();
     }).then(json => {
       setSingle(json);
@@ -357,7 +359,7 @@ const Auction = () => {
 
 /***/ }),
 
-/***/ 6:
+/***/ 4:
 /*!************************************!*\
   !*** multi ./pages/aukcje/[id].js ***!
   \************************************/
