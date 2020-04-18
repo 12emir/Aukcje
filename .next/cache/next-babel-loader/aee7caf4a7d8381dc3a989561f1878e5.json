@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from \"react\";\nimport Link from \"next/link\";\nexport default function Index() {\n  return __jsx(\"div\", {\n    className: \"p-4 shadow rounded bg-white\"\n  }, __jsx(\"h1\", {\n    className: \"text-purple-500 leading-normal\"\n  }, \"Login\"));\n}","map":null,"metadata":{},"sourceType":"module"}

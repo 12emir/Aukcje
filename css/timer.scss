@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+
+.timer-wrapper {
+  @apply flex flex-col p-2 mr-3 items-center bg-white rounded-lg shadow-2xl;
+}
+.timer-count {
+  background: -webkit-linear-gradient(45deg, rgb(255, 81, 0), rgb(255, 174, 0));
+  font-size: 23px;
+  font-weight: 900;
+  line-height: 1.2em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.timer-span {
+  @apply text-gray-600 text-sm;
+}

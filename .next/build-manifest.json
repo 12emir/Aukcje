@@ -1,0 +1,70 @@
+{
+  "devFiles": [],
+  "lowPriorityFiles": [
+    "static/hC_ofm_rP7SrCBufLD_3p/_buildManifest.js",
+    "static/hC_ofm_rP7SrCBufLD_3p/_ssgManifest.js"
+  ],
+  "pages": {
+    "/": [
+      "static/runtime/webpack-b65cab0b00afd201cbda.js",
+      "static/chunks/framework.4503cc20512dbab0b6d3.js",
+      "static/chunks/fc5f778e1e63d78266c830946876612c28ecd0a1.92878cf99693685a7c2c.js",
+      "static/chunks/f655c950e7d6920924a6ae46c0a95895fb931a5d.687a212ebd4c9278c5a0.js",
+      "static/runtime/main-6b76c66af3810299898c.js"
+    ],
+    "/_app": [
+      "static/runtime/webpack-b65cab0b00afd201cbda.js",
+      "static/chunks/framework.4503cc20512dbab0b6d3.js",
+      "static/css/41e9d56d11646b1b2434.css",
+      "static/chunks/38f20b9d.37da1e6c94fa5227f4d3.js",
+      "static/chunks/fc5f778e1e63d78266c830946876612c28ecd0a1.92878cf99693685a7c2c.js",
+      "static/css/dd43c40589c40c46d7f9.css",
+      "static/runtime/main-6b76c66af3810299898c.js"
+    ],
+    "/_error": [
+      "static/runtime/webpack-b65cab0b00afd201cbda.js",
+      "static/chunks/framework.4503cc20512dbab0b6d3.js",
+      "static/runtime/main-6b76c66af3810299898c.js"
+    ],
+    "/_polyfills": [
+      "static/runtime/polyfills-ef69e3520fae86d5dd27.js"
+    ],
+    "/aukcje/[id]": [
+      "static/runtime/webpack-b65cab0b00afd201cbda.js",
+      "static/chunks/framework.4503cc20512dbab0b6d3.js",
+      "static/chunks/f655c950e7d6920924a6ae46c0a95895fb931a5d.687a212ebd4c9278c5a0.js",
+      "static/runtime/main-6b76c66af3810299898c.js"
+    ],
+    "/how-to": [
+      "static/runtime/webpack-b65cab0b00afd201cbda.js",
+      "static/chunks/framework.4503cc20512dbab0b6d3.js",
+      "static/chunks/fc5f778e1e63d78266c830946876612c28ecd0a1.92878cf99693685a7c2c.js",
+      "static/runtime/main-6b76c66af3810299898c.js"
+    ],
+    "/index": [
+      "static/runtime/webpack-b65cab0b00afd201cbda.js",
+      "static/chunks/framework.4503cc20512dbab0b6d3.js",
+      "static/chunks/fc5f778e1e63d78266c830946876612c28ecd0a1.92878cf99693685a7c2c.js",
+      "static/chunks/f655c950e7d6920924a6ae46c0a95895fb931a5d.687a212ebd4c9278c5a0.js",
+      "static/runtime/main-6b76c66af3810299898c.js"
+    ],
+    "/live-competitions": [
+      "static/runtime/webpack-b65cab0b00afd201cbda.js",
+      "static/chunks/framework.4503cc20512dbab0b6d3.js",
+      "static/chunks/fc5f778e1e63d78266c830946876612c28ecd0a1.92878cf99693685a7c2c.js",
+      "static/runtime/main-6b76c66af3810299898c.js"
+    ],
+    "/login": [
+      "static/runtime/webpack-b65cab0b00afd201cbda.js",
+      "static/chunks/framework.4503cc20512dbab0b6d3.js",
+      "static/chunks/fc5f778e1e63d78266c830946876612c28ecd0a1.92878cf99693685a7c2c.js",
+      "static/runtime/main-6b76c66af3810299898c.js"
+    ],
+    "/sign-up": [
+      "static/runtime/webpack-b65cab0b00afd201cbda.js",
+      "static/chunks/framework.4503cc20512dbab0b6d3.js",
+      "static/chunks/fc5f778e1e63d78266c830946876612c28ecd0a1.92878cf99693685a7c2c.js",
+      "static/runtime/main-6b76c66af3810299898c.js"
+    ]
+  }
+}
