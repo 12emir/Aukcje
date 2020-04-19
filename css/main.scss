@@ -1,8 +1,31 @@
 @tailwind base;
 @tailwind components;
 @import "../css/timer.scss";
+@import "../css/slider.scss";
 
 body {
   @apply bg-gray-100;
   overflow-y: scroll;
+}
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float: left;
+  width: 100%;
+  position: relative;
 }

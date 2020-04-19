@@ -1798,7 +1798,9 @@ function Index() {
     1: setData
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts").then(response => {
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+      mode: "cors"
+    }).then(response => {
       return response.json();
     }).then(json => {
       setData(json);
@@ -1843,7 +1845,7 @@ function Index() {
       }
     }, __jsx("img", {
       className: "rounded-lg shadow-xl transform hover:scale-105 duration-100",
-      src: "/images/item.png",
+      src: "/images/04.jpg",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -1853,10 +1855,9 @@ function Index() {
     }), __jsx("div", {
       style: {
         top: "10px",
-        left: "10px",
-        padding: "2px 9px"
+        left: "10px"
       },
-      className: "absolute bg-white rounded-lg shadow-lg text-sm text-gray-600",
+      className: "absolute bg-white rounded-lg shadow-lg text-sm uppercase font-bold text-gray-600 px-3 py-1",
       __self: this,
       __source: {
         fileName: _jsxFileName,

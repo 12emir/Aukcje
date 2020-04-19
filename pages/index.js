@@ -33,11 +33,11 @@ export default function Index() {
             <div className='item cursor-pointer relative  ' key={item.title}>
               <img
                 className='rounded-lg shadow-xl transform hover:scale-105 duration-100'
-                src='/images/item.png'
+                src='/images/04.jpg'
               ></img>
               <div
-                style={{ top: "10px", left: "10px", padding: "2px 9px" }}
-                className='absolute bg-white rounded-lg shadow-lg text-sm text-gray-600'
+                style={{ top: "10px", left: "10px" }}
+                className='absolute bg-white rounded-lg shadow-lg text-sm uppercase font-bold text-gray-600 px-3 py-1'
               >
                 Play for $4
               </div>

@@ -1034,7 +1034,7 @@ exports.push([module.i, "/*! normalize.css v8.0.1 | MIT License | github.com/nec
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".timer-wrapper {\n  display: flex;\n  flex-direction: column;\n  padding: 0.5rem;\n  margin-right: 0.75rem;\n  align-items: center;\n  background-color: #fff;\n  border-radius: 0.5rem;\n  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);\n}\n\n.timer-count {\n  background: -webkit-linear-gradient(45deg, #ff5100, #ffae00);\n  font-size: 23px;\n  font-weight: 900;\n  line-height: 1.2em;\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n}\n\n.timer-span {\n  color: #718096;\n  font-size: 0.875rem;\n}\n\nbody {\n  background-color: #f7fafc;\n  overflow-y: scroll;\n}\n\n.container {\n  width: 100%;\n}\n\n@media (min-width: 640px) {\n  .container {\n    max-width: 640px;\n  }\n}\n\n@media (min-width: 768px) {\n  .container {\n    max-width: 768px;\n  }\n}\n\n@media (min-width: 1024px) {\n  .container {\n    max-width: 1024px;\n  }\n}\n\n@media (min-width: 1280px) {\n  .container {\n    max-width: 1280px;\n  }\n}\n\nimg,\nvideo {\n  max-width: 100%;\n  height: auto;\n}\n\n/**\n * Constrain images and videos to the parent width and preserve\n * their instrinsic aspect ratio.\n *\n * https://github.com/mozdevs/cssremedy/issues/14\n */\n\nimg,\nsvg,\nvideo,\ncanvas,\naudio,\niframe,\nembed,\nobject {\n  display: block;\n  vertical-align: middle;\n}\n\n/**\n * Make replaced elements `display: block` by default as that's\n * the behavior you want almost all of the time. Inspired by\n * CSS Remedy, with `svg` added as well.\n *\n * https://github.com/mozdevs/cssremedy/issues/14\n */\n\npre,\ncode,\nkbd,\nsamp {\n  font-family: Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace;\n}\n\n/**\n * Use the configured 'mono' font family for elements that\n * are expected to be rendered with a monospace font, falling\n * back to the system monospace stack if there is no configured\n * 'mono' font family.\n */\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  padding: 0;\n  line-height: inherit;\n  color: inherit;\n}\n\n/**\n * Reset form element properties that are easy to forget to\n * style explicitly so you don't inadvertently introduce\n * styles that deviate from your design system. These styles\n * supplement a partial reset that is already applied by\n * normalize.css.\n */\n\na {\n  color: inherit;\n  text-decoration: inherit;\n}\n\n/**\n * Reset links to optimize for opt-in styling instead of\n * opt-out.\n */\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: inherit;\n  font-weight: inherit;\n}\n\ntable {\n  border-collapse: collapse;\n}\n\nbutton,\n[role=\"button\"] {\n  cursor: pointer;\n}\n\ninput::-webkit-input-placeholder, textarea::-webkit-input-placeholder {\n  color: #a0aec0;\n}\n\ninput::-moz-placeholder, textarea::-moz-placeholder {\n  color: #a0aec0;\n}\n\ninput:-ms-input-placeholder, textarea:-ms-input-placeholder {\n  color: #a0aec0;\n}\n\ninput::-ms-input-placeholder, textarea::-ms-input-placeholder {\n  color: #a0aec0;\n}\n\ninput::placeholder,\ntextarea::placeholder {\n  color: #a0aec0;\n}\n\ntextarea {\n  resize: vertical;\n}\n\nimg {\n  border-style: solid;\n}\n\n/**\n * Undo the `border-style: none` reset that Normalize applies to images so that\n * our `border-{width}` utilities have the expected effect.\n *\n * The Normalize reset is unnecessary for us since we default the border-width\n * to 0 on all elements.\n *\n * https://github.com/tailwindcss/tailwindcss/issues/362\n */\n\nhr {\n  border-top-width: 1px;\n}\n\n/*\n * Ensure horizontal rules are visible by default\n */\n\n*,\n::before,\n::after {\n  box-sizing: border-box; /* 1 */\n  border-width: 0; /* 2 */\n  border-style: solid; /* 2 */\n  border-color: #e2e8f0; /* 2 */\n}\n\n/**\n * 1. Prevent padding and border from affecting element width.\n *\n *    We used to set this in the html element and inherit from\n *    the parent element for everything else. This caused issues\n *    in shadow-dom-enhanced elements like <details> where the content\n *    is wrapped by a div with box-sizing set to `content-box`.\n *\n *    https://github.com/mozdevs/cssremedy/issues/4\n *\n *\n * 2. Allow adding a border to an element by just adding a border-width.\n *\n *    By default, the way the browser specifies that an element should have no\n *    border is by setting it's border-style to `none` in the user-agent\n *    stylesheet.\n *\n *    In order to easily add borders to elements by just setting the `border-width`\n *    property, we change the default border-style for all elements to `solid`, and\n *    use border-width to hide them instead. This way our `border` utilities only\n *    need to set the `border-width` property instead of the entire `border`\n *    shorthand, making our border utilities much more straightforward to compose.\n *\n *    https://github.com/tailwindcss/tailwindcss/pull/116\n */\n\nhtml {\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"; /* 1 */\n  line-height: 1.5; /* 2 */\n}\n\n/**\n * 1. Use the user's configured `sans` font-family (with Tailwind's default\n *    sans-serif font stack as a fallback) as a sane default.\n * 2. Use Tailwind's default \"normal\" line-height so the user isn't forced\n *    to override it to ensure consistency even when using the default theme.\n */\n\n/**\n * Tailwind custom reset styles\n */\n\nol,\nul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\nfieldset {\n  margin: 0;\n  padding: 0;\n}\n\nbutton:focus {\n  outline: 1px dotted;\n  outline: 5px auto -webkit-focus-ring-color;\n}\n\n/**\n * Work around a Firefox/IE bug where the transparent `button` background\n * results in a loss of the default `button` focus styles.\n */\n\nbutton {\n  background-color: transparent;\n  background-image: none;\n  padding: 0;\n}\n\nblockquote,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nhr,\nfigure,\np,\npre {\n  margin: 0;\n}\n\n/**\n * Removes the default spacing and border for appropriate elements.\n */\n\n/**\n * Manually forked from SUIT CSS Base: https://github.com/suitcss/base\n * A thin layer on top of normalize.css that provides a starting point more\n * suitable for web applications.\n */\n\n[hidden] {\n  display: none;\n}\n\n/**\n * Add the correct display in IE 10.\n */\n\ntemplate {\n  display: none;\n}\n\n/**\n * Add the correct display in IE 10+.\n */\n\n/* Misc\n   ========================================================================== */\n\nsummary {\n  display: list-item;\n}\n\n/*\n * Add the correct display in all browsers.\n */\n\ndetails {\n  display: block;\n}\n\n/*\n * Add the correct display in Edge, IE 10+, and Firefox.\n */\n\n/* Interactive\n   ========================================================================== */\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/**\n * Remove the inner padding in Chrome and Safari on macOS.\n */\n\n[type=\"search\"] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box; /* 1 */\n  padding: 0; /* 2 */\n}\n\n/**\n * 1. Add the correct box sizing in IE 10.\n * 2. Remove the padding in IE 10.\n */\n\ntextarea {\n  overflow: auto;\n}\n\n/**\n * Remove the default vertical scrollbar in IE 10+.\n */\n\nprogress {\n  vertical-align: baseline;\n}\n\n/**\n * Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\n\nlegend {\n  box-sizing: border-box; /* 1 */\n  color: inherit; /* 2 */\n  display: table; /* 1 */\n  max-width: 100%; /* 1 */\n  padding: 0; /* 3 */\n  white-space: normal; /* 1 */\n}\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\n\nfieldset {\n  padding: 0.35em 0.75em 0.625em;\n}\n\n/**\n * Correct the padding in Firefox.\n */\n\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\n\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n\n/**\n * Remove the inner border and padding in Firefox.\n */\n\nbutton,\n[type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button;\n}\n\n/**\n * Correct the inability to style clickable types in iOS and Safari.\n */\n\nbutton,\nselect { /* 1 */\n  text-transform: none;\n}\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\n\nbutton,\ninput { /* 1 */\n  overflow: visible;\n}\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit; /* 1 */\n  font-size: 100%; /* 1 */\n  line-height: 1.15; /* 1 */\n  margin: 0; /* 2 */\n}\n\n/**\n * 1. Change the font styles in all browsers.\n * 2. Remove the margin in Firefox and Safari.\n */\n\n/* Forms\n   ========================================================================== */\n\nimg {\n  border-style: none;\n}\n\n/**\n * Remove the border on images inside links in IE 10.\n */\n\n/* Embedded content\n   ========================================================================== */\n\nsup {\n  top: -0.5em;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\n\nsmall {\n  font-size: 80%;\n}\n\n/**\n * Add the correct font size in all browsers.\n */\n\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\n\nabbr[title] {\n  border-bottom: none; /* 1 */\n  text-decoration: underline; /* 2 */\n  -webkit-text-decoration: underline dotted;\n          text-decoration: underline dotted; /* 2 */\n}\n\n/**\n * 1. Remove the bottom border in Chrome 57-\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\n\na {\n  background-color: transparent;\n}\n\n/**\n * Remove the gray background on active links in IE 10.\n */\n\n/* Text-level semantics\n   ========================================================================== */\n\npre {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\nhr {\n  box-sizing: content-box; /* 1 */\n  height: 0; /* 1 */\n  overflow: visible; /* 2 */\n}\n\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\n\n/* Grouping content\n   ========================================================================== */\n\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\n\nmain {\n  display: block;\n}\n\n/**\n * Render the `main` element consistently in IE.\n */\n\nbody {\n  margin: 0;\n}\n\n/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */\n\n/* Document\n   ========================================================================== */\n\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in iOS.\n */\n\nhtml {\n  line-height: 1.15; /* 1 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n}\n\n/* Sections\n   ========================================================================== */\n\n/**\n * Remove the margin in all browsers.\n */", "",{"version":3,"sources":["/Users/kozakiewicz/Desktop/aukcje-app/css/timer.scss","/Users/kozakiewicz/Desktop/aukcje-app/<no source>","/Users/kozakiewicz/Desktop/aukcje-app/css/main.scss"],"names":[],"mappings":"AAGA;ECHA,aAAA;EAAA,sBAAA;EAAA,eAAA;EAAA,qBAAA;EAAA,mBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,iDAAA;ACMA;;AFAA;EACE,4DAAA;EACA,eAAA;EACA,gBAAA;EACA,kBAAA;EACA,6BAAA;EACA,oCAAA;AEGF;;AFDA;ECdA,cAAA;EAAA,mBAAA;ACmBA;;AAfA;EDJA,yBAAA;ECME,kBAAA;AAkBF;;AFvBA;EAAA,WAAA;AAAA;;AAAA;EAAA;IAAA,gBAAA;EAAA;AAAA;;AAAA;EAAA;IAAA,gBAAA;EAAA;AAAA;;AAAA;EAAA;IAAA,iBAAA;EAAA;AAAA;;AAAA;EAAA;IAAA,iBAAA;EAAA;AAAA;;AADA;;EAAA,eAAA;EAAA,YAAA;AAAA;;AAAA;;;;;EAAA;;AAAA;;;;;;;;EAAA,cAAA;EAAA,sBAAA;AAAA;;AAAA;;;;;;EAAA;;AAAA;;;;EAAA,iFAAA;AAAA;;AAAA;;;;;EAAA;;AAAA;;;;;EAAA,UAAA;EAAA,oBAAA;EAAA,cAAA;AAAA;;AAAA;;;;;;EAAA;;AAAA;EAAA,cAAA;EAAA,wBAAA;AAAA;;AAAA;;;EAAA;;AAAA;;;;;;EAAA,kBAAA;EAAA,oBAAA;AAAA;;AAAA;EAAA,yBAAA;AAAA;;AAAA;;EAAA,eAAA;AAAA;;AAAA;EAAA,cAAA;AAAA;;AAAA;EAAA,cAAA;AAAA;;AAAA;EAAA,cAAA;AAAA;;AAAA;EAAA,cAAA;AAAA;;AAAA;;EAAA,cAAA;AAAA;;AAAA;EAAA,gBAAA;AAAA;;AAAA;EAAA,mBAAA;AAAA;;AAAA;;;;;;;;EAAA;;AAAA;EAAA,qBAAA;AAAA;;AAAA;;EAAA;;AAAA;;;EAAA,sBAAA,EAAA,MAAA;EAAA,eAAA,EAAA,MAAA;EAAA,mBAAA,EAAA,MAAA;EAAA,qBAAA,EAAA,MAAA;AAAA;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;EAAA;;AAAA;EAAA,6MAAA,EAAA,MAAA;EAAA,gBAAA,EAAA,MAAA;AAAA;;AAAA;;;;;EAAA;;AAAA;;EAAA;;AAAA;;EAAA,gBAAA;EAAA,SAAA;EAAA,UAAA;AAAA;;AAAA;EAAA,SAAA;EAAA,UAAA;AAAA;;AAAA;EAAA,mBAAA;EAAA,0CAAA;AAAA;;AAAA;;;EAAA;;AAAA;EAAA,6BAAA;EAAA,sBAAA;EAAA,UAAA;AAAA;;AAAA;;;;;;;;;;;;;EAAA,SAAA;AAAA;;AAAA;;EAAA;;AAAA;;;;EAAA;;AAAA;EAAA,aAAA;AAAA;;AAAA;;EAAA;;AAAA;EAAA,aAAA;AAAA;;AAAA;;EAAA;;AAAA;+EAAA;;AAAA;EAAA,kBAAA;AAAA;;AAAA;;EAAA;;AAAA;EAAA,cAAA;AAAA;;AAAA;;EAAA;;AAAA;+EAAA;;AAAA;EAAA,0BAAA,EAAA,MAAA;EAAA,aAAA,EAAA,MAAA;AAAA;;AAAA;;;EAAA;;AAAA;EAAA,wBAAA;AAAA;;AAAA;;EAAA;;AAAA;EAAA,6BAAA,EAAA,MAAA;EAAA,oBAAA,EAAA,MAAA;AAAA;;AAAA;;;EAAA;;AAAA;;EAAA,YAAA;AAAA;;AAAA;;EAAA;;AAAA;;EAAA,sBAAA,EAAA,MAAA;EAAA,UAAA,EAAA,MAAA;AAAA;;AAAA;;;EAAA;;AAAA;EAAA,cAAA;AAAA;;AAAA;;EAAA;;AAAA;EAAA,wBAAA;AAAA;;AAAA;;EAAA;;AAAA;EAAA,sBAAA,EAAA,MAAA;EAAA,cAAA,EAAA,MAAA;EAAA,cAAA,EAAA,MAAA;EAAA,eAAA,EAAA,MAAA;EAAA,UAAA,EAAA,MAAA;EAAA,mBAAA,EAAA,MAAA;AAAA;;AAAA;;;;;EAAA;;AAAA;EAAA,8BAAA;AAAA;;AAAA;;EAAA;;AAAA;;;;EAAA,8BAAA;AAAA;;AAAA;;EAAA;;AAAA;;;;EAAA,kBAAA;EAAA,UAAA;AAAA;;AAAA;;EAAA;;AAAA;;;;EAAA,0BAAA;AAAA;;AAAA;;EAAA;;AAAA;SAAA,MAAA;EAAA,oBAAA;AAAA;;AAAA;;;EAAA;;AAAA;QAAA,MAAA;EAAA,iBAAA;AAAA;;AAAA;;;EAAA;;AAAA;;;;;EAAA,oBAAA,EAAA,MAAA;EAAA,eAAA,EAAA,MAAA;EAAA,iBAAA,EAAA,MAAA;EAAA,SAAA,EAAA,MAAA;AAAA;;AAAA;;;EAAA;;AAAA;+EAAA;;AAAA;EAAA,kBAAA;AAAA;;AAAA;;EAAA;;AAAA;+EAAA;;AAAA;EAAA,WAAA;AAAA;;AAAA;EAAA,eAAA;AAAA;;AAAA;;EAAA,cAAA;EAAA,cAAA;EAAA,kBAAA;EAAA,wBAAA;AAAA;;AAAA;;;EAAA;;AAAA;EAAA,cAAA;AAAA;;AAAA;;EAAA;;AAAA;;;EAAA,iCAAA,EAAA,MAAA;EAAA,cAAA,EAAA,MAAA;AAAA;;AAAA;;;EAAA;;AAAA;;EAAA,mBAAA;AAAA;;AAAA;;EAAA;;AAAA;EAAA,mBAAA,EAAA,MAAA;EAAA,0BAAA,EAAA,MAAA;EAAA,yCAAA;UAAA,iCAAA,EAAA,MAAA;AAAA;;AAAA;;;EAAA;;AAAA;EAAA,6BAAA;AAAA;;AAAA;;EAAA;;AAAA;+EAAA;;AAAA;EAAA,iCAAA,EAAA,MAAA;EAAA,cAAA,EAAA,MAAA;AAAA;;AAAA;;;EAAA;;AAAA;EAAA,uBAAA,EAAA,MAAA;EAAA,SAAA,EAAA,MAAA;EAAA,iBAAA,EAAA,MAAA;AAAA;;AAAA;;;EAAA;;AAAA;+EAAA;;AAAA;EAAA,cAAA;EAAA,gBAAA;AAAA;;AAAA;;;EAAA;;AAAA;EAAA,cAAA;AAAA;;AAAA;;EAAA;;AAAA;EAAA,SAAA;AAAA;;AAAA,2EAAA;;AAAA;+EAAA;;AAAA;;;EAAA;;AAAA;EAAA,iBAAA,EAAA,MAAA;EAAA,8BAAA,EAAA,MAAA;AAAA;;AAAA;+EAAA;;AAAA;;EAAA","file":"main.scss","sourcesContent":["@tailwind base;\n@tailwind components;\n\n.timer-wrapper {\n  @apply flex flex-col p-2 mr-3 items-center bg-white rounded-lg shadow-2xl;\n}\n.timer-count {\n  background: -webkit-linear-gradient(45deg, rgb(255, 81, 0), rgb(255, 174, 0));\n  font-size: 23px;\n  font-weight: 900;\n  line-height: 1.2em;\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n}\n.timer-span {\n  @apply text-gray-600 text-sm;\n}\n",null,"@tailwind base;\n@tailwind components;\n@import \"../css/timer.scss\";\n\nbody {\n  @apply bg-gray-100;\n  overflow-y: scroll;\n}\n"]}]);
+exports.push([module.i, ".timer-wrapper {\n  display: flex;\n  flex-direction: column;\n  padding: 0.5rem;\n  margin-right: 0.75rem;\n  align-items: center;\n  background-color: #fff;\n  border-radius: 0.5rem;\n  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);\n}\n\n.timer-count {\n  background: -webkit-linear-gradient(#ff5100, #ffae00);\n  font-size: 23px;\n  font-weight: 900;\n  line-height: 1.2em;\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n}\n\n.timer-span {\n  color: #718096;\n  font-size: 0.875rem;\n}\n\n.container {\n  width: 100%;\n}\n\n@media (min-width: 640px) {\n  .container {\n    max-width: 640px;\n  }\n}\n\n@media (min-width: 768px) {\n  .container {\n    max-width: 768px;\n  }\n}\n\n@media (min-width: 1024px) {\n  .container {\n    max-width: 1024px;\n  }\n}\n\n@media (min-width: 1280px) {\n  .container {\n    max-width: 1280px;\n  }\n}\n\n.timer-wrapper {\n  display: flex;\n  flex-direction: column;\n  padding: 0.5rem;\n  margin-right: 0.75rem;\n  align-items: center;\n  background-color: #fff;\n  border-radius: 0.5rem;\n  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);\n}\n\n.timer-count {\n  background: -webkit-linear-gradient(#ff5100, #ffae00);\n  font-size: 23px;\n  font-weight: 900;\n  line-height: 1.2em;\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n}\n\n.timer-span {\n  color: #718096;\n  font-size: 0.875rem;\n}\n\nbody {\n  background-color: #f7fafc;\n  overflow-y: scroll;\n}\n\n.btn-nav {\n  position: absolute;\n  color: white;\n  background: rgba(0, 0, 0, 0.15);\n  border-radius: 9999px;\n  padding: 0.5rem;\n  transition: 0.1s all;\n  outline: none;\n}\n\n.btn-nav:hover {\n  transform: scale(1.15);\n  transition: 0.1s all;\n  outline: none;\n}\n\n.next {\n  top: 50%;\n  right: 3%;\n}\n\n.prev {\n  top: 50%;\n  left: 3%;\n}\n\n.carousel {\n  opacity: 0;\n}\n\n.btn-nav:focus {\n  outline: none;\n}\n\n.carousel {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -o-user-select: none;\n  -ms-user-select: none;\n      user-select: none;\n  pointer-events: none;\n}\n\nbody {\n  background-color: #f7fafc;\n  overflow-y: scroll;\n}\n\nimg {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -o-user-select: none;\n  -ms-user-select: none;\n      user-select: none;\n}\n\n.swipe {\n  overflow: hidden;\n  visibility: hidden;\n  position: relative;\n}\n\n.swipe-wrap {\n  overflow: hidden;\n  position: relative;\n}\n\n.swipe-wrap > div {\n  float: left;\n  width: 100%;\n  position: relative;\n}\n\nimg,\nvideo {\n  max-width: 100%;\n  height: auto;\n}\n\n/**\n * Constrain images and videos to the parent width and preserve\n * their instrinsic aspect ratio.\n *\n * https://github.com/mozdevs/cssremedy/issues/14\n */\n\nimg,\nsvg,\nvideo,\ncanvas,\naudio,\niframe,\nembed,\nobject {\n  display: block;\n  vertical-align: middle;\n}\n\n/**\n * Make replaced elements `display: block` by default as that's\n * the behavior you want almost all of the time. Inspired by\n * CSS Remedy, with `svg` added as well.\n *\n * https://github.com/mozdevs/cssremedy/issues/14\n */\n\npre,\ncode,\nkbd,\nsamp {\n  font-family: Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace;\n}\n\n/**\n * Use the configured 'mono' font family for elements that\n * are expected to be rendered with a monospace font, falling\n * back to the system monospace stack if there is no configured\n * 'mono' font family.\n */\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  padding: 0;\n  line-height: inherit;\n  color: inherit;\n}\n\n/**\n * Reset form element properties that are easy to forget to\n * style explicitly so you don't inadvertently introduce\n * styles that deviate from your design system. These styles\n * supplement a partial reset that is already applied by\n * normalize.css.\n */\n\na {\n  color: inherit;\n  text-decoration: inherit;\n}\n\n/**\n * Reset links to optimize for opt-in styling instead of\n * opt-out.\n */\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: inherit;\n  font-weight: inherit;\n}\n\ntable {\n  border-collapse: collapse;\n}\n\nbutton,\n[role=\"button\"] {\n  cursor: pointer;\n}\n\ninput::-webkit-input-placeholder, textarea::-webkit-input-placeholder {\n  color: #a0aec0;\n}\n\ninput::-moz-placeholder, textarea::-moz-placeholder {\n  color: #a0aec0;\n}\n\ninput:-ms-input-placeholder, textarea:-ms-input-placeholder {\n  color: #a0aec0;\n}\n\ninput::-ms-input-placeholder, textarea::-ms-input-placeholder {\n  color: #a0aec0;\n}\n\ninput::placeholder,\ntextarea::placeholder {\n  color: #a0aec0;\n}\n\ntextarea {\n  resize: vertical;\n}\n\nimg {\n  border-style: solid;\n}\n\n/**\n * Undo the `border-style: none` reset that Normalize applies to images so that\n * our `border-{width}` utilities have the expected effect.\n *\n * The Normalize reset is unnecessary for us since we default the border-width\n * to 0 on all elements.\n *\n * https://github.com/tailwindcss/tailwindcss/issues/362\n */\n\nhr {\n  border-top-width: 1px;\n}\n\n/*\n * Ensure horizontal rules are visible by default\n */\n\n*,\n::before,\n::after {\n  box-sizing: border-box; /* 1 */\n  border-width: 0; /* 2 */\n  border-style: solid; /* 2 */\n  border-color: #e2e8f0; /* 2 */\n}\n\n/**\n * 1. Prevent padding and border from affecting element width.\n *\n *    We used to set this in the html element and inherit from\n *    the parent element for everything else. This caused issues\n *    in shadow-dom-enhanced elements like <details> where the content\n *    is wrapped by a div with box-sizing set to `content-box`.\n *\n *    https://github.com/mozdevs/cssremedy/issues/4\n *\n *\n * 2. Allow adding a border to an element by just adding a border-width.\n *\n *    By default, the way the browser specifies that an element should have no\n *    border is by setting it's border-style to `none` in the user-agent\n *    stylesheet.\n *\n *    In order to easily add borders to elements by just setting the `border-width`\n *    property, we change the default border-style for all elements to `solid`, and\n *    use border-width to hide them instead. This way our `border` utilities only\n *    need to set the `border-width` property instead of the entire `border`\n *    shorthand, making our border utilities much more straightforward to compose.\n *\n *    https://github.com/tailwindcss/tailwindcss/pull/116\n */\n\nhtml {\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"; /* 1 */\n  line-height: 1.5; /* 2 */\n}\n\n/**\n * 1. Use the user's configured `sans` font-family (with Tailwind's default\n *    sans-serif font stack as a fallback) as a sane default.\n * 2. Use Tailwind's default \"normal\" line-height so the user isn't forced\n *    to override it to ensure consistency even when using the default theme.\n */\n\n/**\n * Tailwind custom reset styles\n */\n\nol,\nul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\nfieldset {\n  margin: 0;\n  padding: 0;\n}\n\nbutton:focus {\n  outline: 1px dotted;\n  outline: 5px auto -webkit-focus-ring-color;\n}\n\n/**\n * Work around a Firefox/IE bug where the transparent `button` background\n * results in a loss of the default `button` focus styles.\n */\n\nbutton {\n  background-color: transparent;\n  background-image: none;\n  padding: 0;\n}\n\nblockquote,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nhr,\nfigure,\np,\npre {\n  margin: 0;\n}\n\n/**\n * Removes the default spacing and border for appropriate elements.\n */\n\n/**\n * Manually forked from SUIT CSS Base: https://github.com/suitcss/base\n * A thin layer on top of normalize.css that provides a starting point more\n * suitable for web applications.\n */\n\n[hidden] {\n  display: none;\n}\n\n/**\n * Add the correct display in IE 10.\n */\n\ntemplate {\n  display: none;\n}\n\n/**\n * Add the correct display in IE 10+.\n */\n\n/* Misc\n   ========================================================================== */\n\nsummary {\n  display: list-item;\n}\n\n/*\n * Add the correct display in all browsers.\n */\n\ndetails {\n  display: block;\n}\n\n/*\n * Add the correct display in Edge, IE 10+, and Firefox.\n */\n\n/* Interactive\n   ========================================================================== */\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/**\n * Remove the inner padding in Chrome and Safari on macOS.\n */\n\n[type=\"search\"] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box; /* 1 */\n  padding: 0; /* 2 */\n}\n\n/**\n * 1. Add the correct box sizing in IE 10.\n * 2. Remove the padding in IE 10.\n */\n\ntextarea {\n  overflow: auto;\n}\n\n/**\n * Remove the default vertical scrollbar in IE 10+.\n */\n\nprogress {\n  vertical-align: baseline;\n}\n\n/**\n * Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\n\nlegend {\n  box-sizing: border-box; /* 1 */\n  color: inherit; /* 2 */\n  display: table; /* 1 */\n  max-width: 100%; /* 1 */\n  padding: 0; /* 3 */\n  white-space: normal; /* 1 */\n}\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\n\nfieldset {\n  padding: 0.35em 0.75em 0.625em;\n}\n\n/**\n * Correct the padding in Firefox.\n */\n\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\n\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n\n/**\n * Remove the inner border and padding in Firefox.\n */\n\nbutton,\n[type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button;\n}\n\n/**\n * Correct the inability to style clickable types in iOS and Safari.\n */\n\nbutton,\nselect { /* 1 */\n  text-transform: none;\n}\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\n\nbutton,\ninput { /* 1 */\n  overflow: visible;\n}\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit; /* 1 */\n  font-size: 100%; /* 1 */\n  line-height: 1.15; /* 1 */\n  margin: 0; /* 2 */\n}\n\n/**\n * 1. Change the font styles in all browsers.\n * 2. Remove the margin in Firefox and Safari.\n */\n\n/* Forms\n   ========================================================================== */\n\nimg {\n  border-style: none;\n}\n\n/**\n * Remove the border on images inside links in IE 10.\n */\n\n/* Embedded content\n   ========================================================================== */\n\nsup {\n  top: -0.5em;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\n\nsmall {\n  font-size: 80%;\n}\n\n/**\n * Add the correct font size in all browsers.\n */\n\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\n/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */\n\n/* Document\n   ========================================================================== */\n\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in iOS.\n */\n\nhtml {\n  line-height: 1.15; /* 1 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n}\n\n/* Sections\n   ========================================================================== */\n\n/**\n * Remove the margin in all browsers.\n */\n\nbody {\n  margin: 0;\n}\n\n/**\n * Render the `main` element consistently in IE.\n */\n\nmain {\n  display: block;\n}\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\n\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n\n/* Grouping content\n   ========================================================================== */\n\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\n\nhr {\n  box-sizing: content-box; /* 1 */\n  height: 0; /* 1 */\n  overflow: visible; /* 2 */\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\npre {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/* Text-level semantics\n   ========================================================================== */\n\n/**\n * Remove the gray background on active links in IE 10.\n */\n\na {\n  background-color: transparent;\n}\n\n/**\n * 1. Remove the bottom border in Chrome 57-\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\n\nabbr[title] {\n  border-bottom: none; /* 1 */\n  text-decoration: underline; /* 2 */\n  -webkit-text-decoration: underline dotted;\n          text-decoration: underline dotted; /* 2 */\n}\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\n\nb,\nstrong {\n  font-weight: bolder;\n}", "",{"version":3,"sources":["/Users/kozakiewicz/Desktop/aukcje-app/css/timer.scss","/Users/kozakiewicz/Desktop/aukcje-app/<no source>","/Users/kozakiewicz/Desktop/aukcje-app/css/main.scss","/Users/kozakiewicz/Desktop/aukcje-app/css/slider.scss"],"names":[],"mappings":"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","file":"main.scss","sourcesContent":["@tailwind base;\n@tailwind components;\n\n.timer-wrapper {\n  @apply flex flex-col p-2 mr-3 items-center bg-white rounded-lg shadow-2xl;\n}\n.timer-count {\n  background: -webkit-linear-gradient(rgb(255, 81, 0), rgb(255, 174, 0));\n  font-size: 23px;\n  font-weight: 900;\n  line-height: 1.2em;\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n}\n.timer-span {\n  @apply text-gray-600 text-sm;\n}\n",null,"@tailwind base;\n@tailwind components;\n@import \"../css/timer.scss\";\n@import \"../css/slider.scss\";\n\nbody {\n  @apply bg-gray-100;\n  overflow-y: scroll;\n}\nimg {\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -o-user-select: none;\n  user-select: none;\n}\n\n.swipe {\n  overflow: hidden;\n  visibility: hidden;\n  position: relative;\n}\n.swipe-wrap {\n  overflow: hidden;\n  position: relative;\n}\n.swipe-wrap > div {\n  float: left;\n  width: 100%;\n  position: relative;\n}\n","@tailwind base;\n@tailwind components;\n@import \"../css/timer.scss\";\n\nbody {\n  @apply bg-gray-100;\n  overflow-y: scroll;\n}\n\n.btn-nav {\n  position: absolute;\n  color: white;\n  background: rgba(0, 0, 0, 0.15);\n  @apply rounded-full p-2;\n  transition: 0.1s all;\n  outline: none;\n}\n.btn-nav:hover {\n  transform: scale(1.15);\n  transition: 0.1s all;\n  outline: none;\n}\n\n.next {\n  top: 50%;\n  right: 3%;\n}\n\n.prev {\n  top: 50%;\n  left: 3%;\n}\n\n.carousel {\n  opacity: 0;\n}\n\n.btn-nav:focus {\n  outline: none;\n}\n\n.carousel {\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -o-user-select: none;\n  user-select: none;\n  pointer-events: none;\n}\n"]}]);
 
 
 /***/ }),
@@ -1137,72 +1137,6 @@ function toComment(sourceMap) {
   var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
   return "/*# ".concat(data, " */");
 }
-
-/***/ }),
-
-/***/ "./node_modules/dom-helpers/class/addClass.js":
-/*!****************************************************!*\
-  !*** ./node_modules/dom-helpers/class/addClass.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-exports.__esModule = true;
-exports.default = addClass;
-
-var _hasClass = _interopRequireDefault(__webpack_require__(/*! ./hasClass */ "./node_modules/dom-helpers/class/hasClass.js"));
-
-function addClass(element, className) {
-  if (element.classList) element.classList.add(className);else if (!(0, _hasClass.default)(element, className)) if (typeof element.className === 'string') element.className = element.className + ' ' + className;else element.setAttribute('class', (element.className && element.className.baseVal || '') + ' ' + className);
-}
-
-module.exports = exports["default"];
-
-/***/ }),
-
-/***/ "./node_modules/dom-helpers/class/hasClass.js":
-/*!****************************************************!*\
-  !*** ./node_modules/dom-helpers/class/hasClass.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.default = hasClass;
-
-function hasClass(element, className) {
-  if (element.classList) return !!className && element.classList.contains(className);else return (" " + (element.className.baseVal || element.className) + " ").indexOf(" " + className + " ") !== -1;
-}
-
-module.exports = exports["default"];
-
-/***/ }),
-
-/***/ "./node_modules/dom-helpers/class/removeClass.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/dom-helpers/class/removeClass.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function replaceClassName(origClass, classToRemove) {
-  return origClass.replace(new RegExp('(^|\\s)' + classToRemove + '(?:\\s|$)', 'g'), '$1').replace(/\s+/g, ' ').replace(/^\s*|\s*$/g, '');
-}
-
-module.exports = function removeClass(element, className) {
-  if (element.classList) element.classList.remove(className);else if (typeof element.className === 'string') element.className = replaceClassName(element.className, className);else element.setAttribute('class', replaceClassName(element.className && element.className.baseVal || '', className));
-};
 
 /***/ }),
 
@@ -1336,11 +1270,11 @@ var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_mo
 
 var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
 
-var _Transition = _interopRequireDefault(__webpack_require__(/*! react-transition-group/Transition */ "./node_modules/react-transition-group/Transition.js"));
+var _Transition = _interopRequireDefault(__webpack_require__(/*! react-transition-group/Transition */ "./node_modules/next-page-transitions/node_modules/react-transition-group/Transition.js"));
 
-var _CSSTransition = _interopRequireDefault(__webpack_require__(/*! react-transition-group/CSSTransition */ "./node_modules/react-transition-group/CSSTransition.js"));
+var _CSSTransition = _interopRequireDefault(__webpack_require__(/*! react-transition-group/CSSTransition */ "./node_modules/next-page-transitions/node_modules/react-transition-group/CSSTransition.js"));
 
-var _PropTypes = __webpack_require__(/*! react-transition-group/utils/PropTypes */ "./node_modules/react-transition-group/utils/PropTypes.js");
+var _PropTypes = __webpack_require__(/*! react-transition-group/utils/PropTypes */ "./node_modules/next-page-transitions/node_modules/react-transition-group/utils/PropTypes.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1776,6 +1710,1106 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 module.exports = {
   PageTransition: _PageTransition.default
 };
+
+/***/ }),
+
+/***/ "./node_modules/next-page-transitions/node_modules/dom-helpers/class/addClass.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/next-page-transitions/node_modules/dom-helpers/class/addClass.js ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+exports.__esModule = true;
+exports.default = addClass;
+
+var _hasClass = _interopRequireDefault(__webpack_require__(/*! ./hasClass */ "./node_modules/next-page-transitions/node_modules/dom-helpers/class/hasClass.js"));
+
+function addClass(element, className) {
+  if (element.classList) element.classList.add(className);else if (!(0, _hasClass.default)(element, className)) if (typeof element.className === 'string') element.className = element.className + ' ' + className;else element.setAttribute('class', (element.className && element.className.baseVal || '') + ' ' + className);
+}
+
+module.exports = exports["default"];
+
+/***/ }),
+
+/***/ "./node_modules/next-page-transitions/node_modules/dom-helpers/class/hasClass.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/next-page-transitions/node_modules/dom-helpers/class/hasClass.js ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = hasClass;
+
+function hasClass(element, className) {
+  if (element.classList) return !!className && element.classList.contains(className);else return (" " + (element.className.baseVal || element.className) + " ").indexOf(" " + className + " ") !== -1;
+}
+
+module.exports = exports["default"];
+
+/***/ }),
+
+/***/ "./node_modules/next-page-transitions/node_modules/dom-helpers/class/removeClass.js":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/next-page-transitions/node_modules/dom-helpers/class/removeClass.js ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function replaceClassName(origClass, classToRemove) {
+  return origClass.replace(new RegExp('(^|\\s)' + classToRemove + '(?:\\s|$)', 'g'), '$1').replace(/\s+/g, ' ').replace(/^\s*|\s*$/g, '');
+}
+
+module.exports = function removeClass(element, className) {
+  if (element.classList) element.classList.remove(className);else if (typeof element.className === 'string') element.className = replaceClassName(element.className, className);else element.setAttribute('class', replaceClassName(element.className && element.className.baseVal || '', className));
+};
+
+/***/ }),
+
+/***/ "./node_modules/next-page-transitions/node_modules/react-transition-group/CSSTransition.js":
+/*!*************************************************************************************************!*\
+  !*** ./node_modules/next-page-transitions/node_modules/react-transition-group/CSSTransition.js ***!
+  \*************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var PropTypes = _interopRequireWildcard(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _addClass = _interopRequireDefault(__webpack_require__(/*! dom-helpers/class/addClass */ "./node_modules/next-page-transitions/node_modules/dom-helpers/class/addClass.js"));
+
+var _removeClass = _interopRequireDefault(__webpack_require__(/*! dom-helpers/class/removeClass */ "./node_modules/next-page-transitions/node_modules/dom-helpers/class/removeClass.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _Transition = _interopRequireDefault(__webpack_require__(/*! ./Transition */ "./node_modules/next-page-transitions/node_modules/react-transition-group/Transition.js"));
+
+var _PropTypes = __webpack_require__(/*! ./utils/PropTypes */ "./node_modules/next-page-transitions/node_modules/react-transition-group/utils/PropTypes.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var addClass = function addClass(node, classes) {
+  return node && classes && classes.split(' ').forEach(function (c) {
+    return (0, _addClass.default)(node, c);
+  });
+};
+
+var removeClass = function removeClass(node, classes) {
+  return node && classes && classes.split(' ').forEach(function (c) {
+    return (0, _removeClass.default)(node, c);
+  });
+};
+/**
+ * A transition component inspired by the excellent
+ * [ng-animate](http://www.nganimate.org/) library, you should use it if you're
+ * using CSS transitions or animations. It's built upon the
+ * [`Transition`](https://reactcommunity.org/react-transition-group/transition)
+ * component, so it inherits all of its props.
+ *
+ * `CSSTransition` applies a pair of class names during the `appear`, `enter`,
+ * and `exit` states of the transition. The first class is applied and then a
+ * second `*-active` class in order to activate the CSSS transition. After the
+ * transition, matching `*-done` class names are applied to persist the
+ * transition state.
+ *
+ * ```jsx
+ * function App() {
+ *   const [inProp, setInProp] = useState(false);
+ *   return (
+ *     <div>
+ *       <CSSTransition in={inProp} timeout={200} classNames="my-node">
+ *         <div>
+ *           {"I'll receive my-node-* classes"}
+ *         </div>
+ *       </CSSTransition>
+ *       <button type="button" onClick={() => setInProp(true)}>
+ *         Click to Enter
+ *       </button>
+ *     </div>
+ *   );
+ * }
+ * ```
+ *
+ * When the `in` prop is set to `true`, the child component will first receive
+ * the class `example-enter`, then the `example-enter-active` will be added in
+ * the next tick. `CSSTransition` [forces a
+ * reflow](https://github.com/reactjs/react-transition-group/blob/5007303e729a74be66a21c3e2205e4916821524b/src/CSSTransition.js#L208-L215)
+ * between before adding the `example-enter-active`. This is an important trick
+ * because it allows us to transition between `example-enter` and
+ * `example-enter-active` even though they were added immediately one after
+ * another. Most notably, this is what makes it possible for us to animate
+ * _appearance_.
+ *
+ * ```css
+ * .my-node-enter {
+ *   opacity: 0;
+ * }
+ * .my-node-enter-active {
+ *   opacity: 1;
+ *   transition: opacity 200ms;
+ * }
+ * .my-node-exit {
+ *   opacity: 1;
+ * }
+ * .my-node-exit-active {
+ *   opacity: 0;
+ *   transition: opacity: 200ms;
+ * }
+ * ```
+ *
+ * `*-active` classes represent which styles you want to animate **to**.
+ */
+
+
+var CSSTransition =
+/*#__PURE__*/
+function (_React$Component) {
+  _inheritsLoose(CSSTransition, _React$Component);
+
+  function CSSTransition() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+
+    _this.onEnter = function (node, appearing) {
+      var _this$getClassNames = _this.getClassNames(appearing ? 'appear' : 'enter'),
+          className = _this$getClassNames.className;
+
+      _this.removeClasses(node, 'exit');
+
+      addClass(node, className);
+
+      if (_this.props.onEnter) {
+        _this.props.onEnter(node, appearing);
+      }
+    };
+
+    _this.onEntering = function (node, appearing) {
+      var _this$getClassNames2 = _this.getClassNames(appearing ? 'appear' : 'enter'),
+          activeClassName = _this$getClassNames2.activeClassName;
+
+      _this.reflowAndAddClass(node, activeClassName);
+
+      if (_this.props.onEntering) {
+        _this.props.onEntering(node, appearing);
+      }
+    };
+
+    _this.onEntered = function (node, appearing) {
+      var appearClassName = _this.getClassNames('appear').doneClassName;
+
+      var enterClassName = _this.getClassNames('enter').doneClassName;
+
+      var doneClassName = appearing ? appearClassName + " " + enterClassName : enterClassName;
+
+      _this.removeClasses(node, appearing ? 'appear' : 'enter');
+
+      addClass(node, doneClassName);
+
+      if (_this.props.onEntered) {
+        _this.props.onEntered(node, appearing);
+      }
+    };
+
+    _this.onExit = function (node) {
+      var _this$getClassNames3 = _this.getClassNames('exit'),
+          className = _this$getClassNames3.className;
+
+      _this.removeClasses(node, 'appear');
+
+      _this.removeClasses(node, 'enter');
+
+      addClass(node, className);
+
+      if (_this.props.onExit) {
+        _this.props.onExit(node);
+      }
+    };
+
+    _this.onExiting = function (node) {
+      var _this$getClassNames4 = _this.getClassNames('exit'),
+          activeClassName = _this$getClassNames4.activeClassName;
+
+      _this.reflowAndAddClass(node, activeClassName);
+
+      if (_this.props.onExiting) {
+        _this.props.onExiting(node);
+      }
+    };
+
+    _this.onExited = function (node) {
+      var _this$getClassNames5 = _this.getClassNames('exit'),
+          doneClassName = _this$getClassNames5.doneClassName;
+
+      _this.removeClasses(node, 'exit');
+
+      addClass(node, doneClassName);
+
+      if (_this.props.onExited) {
+        _this.props.onExited(node);
+      }
+    };
+
+    _this.getClassNames = function (type) {
+      var classNames = _this.props.classNames;
+      var isStringClassNames = typeof classNames === 'string';
+      var prefix = isStringClassNames && classNames ? classNames + '-' : '';
+      var className = isStringClassNames ? prefix + type : classNames[type];
+      var activeClassName = isStringClassNames ? className + '-active' : classNames[type + 'Active'];
+      var doneClassName = isStringClassNames ? className + '-done' : classNames[type + 'Done'];
+      return {
+        className: className,
+        activeClassName: activeClassName,
+        doneClassName: doneClassName
+      };
+    };
+
+    return _this;
+  }
+
+  var _proto = CSSTransition.prototype;
+
+  _proto.removeClasses = function removeClasses(node, type) {
+    var _this$getClassNames6 = this.getClassNames(type),
+        className = _this$getClassNames6.className,
+        activeClassName = _this$getClassNames6.activeClassName,
+        doneClassName = _this$getClassNames6.doneClassName;
+
+    className && removeClass(node, className);
+    activeClassName && removeClass(node, activeClassName);
+    doneClassName && removeClass(node, doneClassName);
+  };
+
+  _proto.reflowAndAddClass = function reflowAndAddClass(node, className) {
+    // This is for to force a repaint,
+    // which is necessary in order to transition styles when adding a class name.
+    if (className) {
+      /* eslint-disable no-unused-expressions */
+      node && node.scrollTop;
+      /* eslint-enable no-unused-expressions */
+
+      addClass(node, className);
+    }
+  };
+
+  _proto.render = function render() {
+    var props = _extends({}, this.props);
+
+    delete props.classNames;
+    return _react.default.createElement(_Transition.default, _extends({}, props, {
+      onEnter: this.onEnter,
+      onEntered: this.onEntered,
+      onEntering: this.onEntering,
+      onExit: this.onExit,
+      onExiting: this.onExiting,
+      onExited: this.onExited
+    }));
+  };
+
+  return CSSTransition;
+}(_react.default.Component);
+
+CSSTransition.defaultProps = {
+  classNames: ''
+};
+CSSTransition.propTypes =  true ? _extends({}, _Transition.default.propTypes, {
+  /**
+   * The animation classNames applied to the component as it enters, exits or
+   * has finished the transition. A single name can be provided and it will be
+   * suffixed for each stage: e.g.
+   *
+   * `classNames="fade"` applies `fade-enter`, `fade-enter-active`,
+   * `fade-enter-done`, `fade-exit`, `fade-exit-active`, `fade-exit-done`,
+   * `fade-appear`, `fade-appear-active`, and `fade-appear-done`.
+   *
+   * **Note**: `fade-appear-done` and `fade-enter-done` will _both_ be applied.
+   * This allows you to define different behavior for when appearing is done and
+   * when regular entering is done, using selectors like
+   * `.fade-enter-done:not(.fade-appear-done)`. For example, you could apply an
+   * epic entrance animation when element first appears in the DOM using
+   * [Animate.css](https://daneden.github.io/animate.css/). Otherwise you can
+   * simply use `fade-enter-done` for defining both cases.
+   *
+   * Each individual classNames can also be specified independently like:
+   *
+   * ```js
+   * classNames={{
+   *  appear: 'my-appear',
+   *  appearActive: 'my-active-appear',
+   *  appearDone: 'my-done-appear',
+   *  enter: 'my-enter',
+   *  enterActive: 'my-active-enter',
+   *  enterDone: 'my-done-enter',
+   *  exit: 'my-exit',
+   *  exitActive: 'my-active-exit',
+   *  exitDone: 'my-done-exit',
+   * }}
+   * ```
+   *
+   * If you want to set these classes using CSS Modules:
+   *
+   * ```js
+   * import styles from './styles.css';
+   * ```
+   *
+   * you might want to use camelCase in your CSS file, that way could simply
+   * spread them instead of listing them one by one:
+   *
+   * ```js
+   * classNames={{ ...styles }}
+   * ```
+   *
+   * @type {string | {
+   *  appear?: string,
+   *  appearActive?: string,
+   *  appearDone?: string,
+   *  enter?: string,
+   *  enterActive?: string,
+   *  enterDone?: string,
+   *  exit?: string,
+   *  exitActive?: string,
+   *  exitDone?: string,
+   * }}
+   */
+  classNames: _PropTypes.classNamesShape,
+
+  /**
+   * A `<Transition>` callback fired immediately after the 'enter' or 'appear' class is
+   * applied.
+   *
+   * @type Function(node: HtmlElement, isAppearing: bool)
+   */
+  onEnter: PropTypes.func,
+
+  /**
+   * A `<Transition>` callback fired immediately after the 'enter-active' or
+   * 'appear-active' class is applied.
+   *
+   * @type Function(node: HtmlElement, isAppearing: bool)
+   */
+  onEntering: PropTypes.func,
+
+  /**
+   * A `<Transition>` callback fired immediately after the 'enter' or
+   * 'appear' classes are **removed** and the `done` class is added to the DOM node.
+   *
+   * @type Function(node: HtmlElement, isAppearing: bool)
+   */
+  onEntered: PropTypes.func,
+
+  /**
+   * A `<Transition>` callback fired immediately after the 'exit' class is
+   * applied.
+   *
+   * @type Function(node: HtmlElement)
+   */
+  onExit: PropTypes.func,
+
+  /**
+   * A `<Transition>` callback fired immediately after the 'exit-active' is applied.
+   *
+   * @type Function(node: HtmlElement)
+   */
+  onExiting: PropTypes.func,
+
+  /**
+   * A `<Transition>` callback fired immediately after the 'exit' classes
+   * are **removed** and the `exit-done` class is added to the DOM node.
+   *
+   * @type Function(node: HtmlElement)
+   */
+  onExited: PropTypes.func
+}) : undefined;
+var _default = CSSTransition;
+exports.default = _default;
+module.exports = exports["default"];
+
+/***/ }),
+
+/***/ "./node_modules/next-page-transitions/node_modules/react-transition-group/Transition.js":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/next-page-transitions/node_modules/react-transition-group/Transition.js ***!
+  \**********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = exports.EXITING = exports.ENTERED = exports.ENTERING = exports.EXITED = exports.UNMOUNTED = void 0;
+
+var PropTypes = _interopRequireWildcard(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _reactDom = _interopRequireDefault(__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"));
+
+var _reactLifecyclesCompat = __webpack_require__(/*! react-lifecycles-compat */ "./node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js");
+
+var _PropTypes = __webpack_require__(/*! ./utils/PropTypes */ "./node_modules/next-page-transitions/node_modules/react-transition-group/utils/PropTypes.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var UNMOUNTED = 'unmounted';
+exports.UNMOUNTED = UNMOUNTED;
+var EXITED = 'exited';
+exports.EXITED = EXITED;
+var ENTERING = 'entering';
+exports.ENTERING = ENTERING;
+var ENTERED = 'entered';
+exports.ENTERED = ENTERED;
+var EXITING = 'exiting';
+/**
+ * The Transition component lets you describe a transition from one component
+ * state to another _over time_ with a simple declarative API. Most commonly
+ * it's used to animate the mounting and unmounting of a component, but can also
+ * be used to describe in-place transition states as well.
+ *
+ * ---
+ *
+ * **Note**: `Transition` is a platform-agnostic base component. If you're using
+ * transitions in CSS, you'll probably want to use
+ * [`CSSTransition`](https://reactcommunity.org/react-transition-group/css-transition)
+ * instead. It inherits all the features of `Transition`, but contains
+ * additional features necessary to play nice with CSS transitions (hence the
+ * name of the component).
+ *
+ * ---
+ *
+ * By default the `Transition` component does not alter the behavior of the
+ * component it renders, it only tracks "enter" and "exit" states for the
+ * components. It's up to you to give meaning and effect to those states. For
+ * example we can add styles to a component when it enters or exits:
+ *
+ * ```jsx
+ * import { Transition } from 'react-transition-group';
+ *
+ * const duration = 300;
+ *
+ * const defaultStyle = {
+ *   transition: `opacity ${duration}ms ease-in-out`,
+ *   opacity: 0,
+ * }
+ *
+ * const transitionStyles = {
+ *   entering: { opacity: 0 },
+ *   entered:  { opacity: 1 },
+ * };
+ *
+ * const Fade = ({ in: inProp }) => (
+ *   <Transition in={inProp} timeout={duration}>
+ *     {state => (
+ *       <div style={{
+ *         ...defaultStyle,
+ *         ...transitionStyles[state]
+ *       }}>
+ *         I'm a fade Transition!
+ *       </div>
+ *     )}
+ *   </Transition>
+ * );
+ * ```
+ *
+ * There are 4 main states a Transition can be in:
+ *  - `'entering'`
+ *  - `'entered'`
+ *  - `'exiting'`
+ *  - `'exited'`
+ *
+ * Transition state is toggled via the `in` prop. When `true` the component
+ * begins the "Enter" stage. During this stage, the component will shift from
+ * its current transition state, to `'entering'` for the duration of the
+ * transition and then to the `'entered'` stage once it's complete. Let's take
+ * the following example (we'll use the
+ * [useState](https://reactjs.org/docs/hooks-reference.html#usestate) hook):
+ *
+ * ```jsx
+ * function App() {
+ *   const [inProp, setInProp] = useState(false);
+ *   return (
+ *     <div>
+ *       <Transition in={inProp} timeout={500}>
+ *         {state => (
+ *           // ...
+ *         )}
+ *       </Transition>
+ *       <button onClick={() => setInProp(true)}>
+ *         Click to Enter
+ *       </button>
+ *     </div>
+ *   );
+ * }
+ * ```
+ *
+ * When the button is clicked the component will shift to the `'entering'` state
+ * and stay there for 500ms (the value of `timeout`) before it finally switches
+ * to `'entered'`.
+ *
+ * When `in` is `false` the same thing happens except the state moves from
+ * `'exiting'` to `'exited'`.
+ */
+
+exports.EXITING = EXITING;
+
+var Transition =
+/*#__PURE__*/
+function (_React$Component) {
+  _inheritsLoose(Transition, _React$Component);
+
+  function Transition(props, context) {
+    var _this;
+
+    _this = _React$Component.call(this, props, context) || this;
+    var parentGroup = context.transitionGroup; // In the context of a TransitionGroup all enters are really appears
+
+    var appear = parentGroup && !parentGroup.isMounting ? props.enter : props.appear;
+    var initialStatus;
+    _this.appearStatus = null;
+
+    if (props.in) {
+      if (appear) {
+        initialStatus = EXITED;
+        _this.appearStatus = ENTERING;
+      } else {
+        initialStatus = ENTERED;
+      }
+    } else {
+      if (props.unmountOnExit || props.mountOnEnter) {
+        initialStatus = UNMOUNTED;
+      } else {
+        initialStatus = EXITED;
+      }
+    }
+
+    _this.state = {
+      status: initialStatus
+    };
+    _this.nextCallback = null;
+    return _this;
+  }
+
+  var _proto = Transition.prototype;
+
+  _proto.getChildContext = function getChildContext() {
+    return {
+      transitionGroup: null // allows for nested Transitions
+
+    };
+  };
+
+  Transition.getDerivedStateFromProps = function getDerivedStateFromProps(_ref, prevState) {
+    var nextIn = _ref.in;
+
+    if (nextIn && prevState.status === UNMOUNTED) {
+      return {
+        status: EXITED
+      };
+    }
+
+    return null;
+  }; // getSnapshotBeforeUpdate(prevProps) {
+  //   let nextStatus = null
+  //   if (prevProps !== this.props) {
+  //     const { status } = this.state
+  //     if (this.props.in) {
+  //       if (status !== ENTERING && status !== ENTERED) {
+  //         nextStatus = ENTERING
+  //       }
+  //     } else {
+  //       if (status === ENTERING || status === ENTERED) {
+  //         nextStatus = EXITING
+  //       }
+  //     }
+  //   }
+  //   return { nextStatus }
+  // }
+
+
+  _proto.componentDidMount = function componentDidMount() {
+    this.updateStatus(true, this.appearStatus);
+  };
+
+  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+    var nextStatus = null;
+
+    if (prevProps !== this.props) {
+      var status = this.state.status;
+
+      if (this.props.in) {
+        if (status !== ENTERING && status !== ENTERED) {
+          nextStatus = ENTERING;
+        }
+      } else {
+        if (status === ENTERING || status === ENTERED) {
+          nextStatus = EXITING;
+        }
+      }
+    }
+
+    this.updateStatus(false, nextStatus);
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    this.cancelNextCallback();
+  };
+
+  _proto.getTimeouts = function getTimeouts() {
+    var timeout = this.props.timeout;
+    var exit, enter, appear;
+    exit = enter = appear = timeout;
+
+    if (timeout != null && typeof timeout !== 'number') {
+      exit = timeout.exit;
+      enter = timeout.enter; // TODO: remove fallback for next major
+
+      appear = timeout.appear !== undefined ? timeout.appear : enter;
+    }
+
+    return {
+      exit: exit,
+      enter: enter,
+      appear: appear
+    };
+  };
+
+  _proto.updateStatus = function updateStatus(mounting, nextStatus) {
+    if (mounting === void 0) {
+      mounting = false;
+    }
+
+    if (nextStatus !== null) {
+      // nextStatus will always be ENTERING or EXITING.
+      this.cancelNextCallback();
+
+      var node = _reactDom.default.findDOMNode(this);
+
+      if (nextStatus === ENTERING) {
+        this.performEnter(node, mounting);
+      } else {
+        this.performExit(node);
+      }
+    } else if (this.props.unmountOnExit && this.state.status === EXITED) {
+      this.setState({
+        status: UNMOUNTED
+      });
+    }
+  };
+
+  _proto.performEnter = function performEnter(node, mounting) {
+    var _this2 = this;
+
+    var enter = this.props.enter;
+    var appearing = this.context.transitionGroup ? this.context.transitionGroup.isMounting : mounting;
+    var timeouts = this.getTimeouts();
+    var enterTimeout = appearing ? timeouts.appear : timeouts.enter; // no enter animation skip right to ENTERED
+    // if we are mounting and running this it means appear _must_ be set
+
+    if (!mounting && !enter) {
+      this.safeSetState({
+        status: ENTERED
+      }, function () {
+        _this2.props.onEntered(node);
+      });
+      return;
+    }
+
+    this.props.onEnter(node, appearing);
+    this.safeSetState({
+      status: ENTERING
+    }, function () {
+      _this2.props.onEntering(node, appearing);
+
+      _this2.onTransitionEnd(node, enterTimeout, function () {
+        _this2.safeSetState({
+          status: ENTERED
+        }, function () {
+          _this2.props.onEntered(node, appearing);
+        });
+      });
+    });
+  };
+
+  _proto.performExit = function performExit(node) {
+    var _this3 = this;
+
+    var exit = this.props.exit;
+    var timeouts = this.getTimeouts(); // no exit animation skip right to EXITED
+
+    if (!exit) {
+      this.safeSetState({
+        status: EXITED
+      }, function () {
+        _this3.props.onExited(node);
+      });
+      return;
+    }
+
+    this.props.onExit(node);
+    this.safeSetState({
+      status: EXITING
+    }, function () {
+      _this3.props.onExiting(node);
+
+      _this3.onTransitionEnd(node, timeouts.exit, function () {
+        _this3.safeSetState({
+          status: EXITED
+        }, function () {
+          _this3.props.onExited(node);
+        });
+      });
+    });
+  };
+
+  _proto.cancelNextCallback = function cancelNextCallback() {
+    if (this.nextCallback !== null) {
+      this.nextCallback.cancel();
+      this.nextCallback = null;
+    }
+  };
+
+  _proto.safeSetState = function safeSetState(nextState, callback) {
+    // This shouldn't be necessary, but there are weird race conditions with
+    // setState callbacks and unmounting in testing, so always make sure that
+    // we can cancel any pending setState callbacks after we unmount.
+    callback = this.setNextCallback(callback);
+    this.setState(nextState, callback);
+  };
+
+  _proto.setNextCallback = function setNextCallback(callback) {
+    var _this4 = this;
+
+    var active = true;
+
+    this.nextCallback = function (event) {
+      if (active) {
+        active = false;
+        _this4.nextCallback = null;
+        callback(event);
+      }
+    };
+
+    this.nextCallback.cancel = function () {
+      active = false;
+    };
+
+    return this.nextCallback;
+  };
+
+  _proto.onTransitionEnd = function onTransitionEnd(node, timeout, handler) {
+    this.setNextCallback(handler);
+    var doesNotHaveTimeoutOrListener = timeout == null && !this.props.addEndListener;
+
+    if (!node || doesNotHaveTimeoutOrListener) {
+      setTimeout(this.nextCallback, 0);
+      return;
+    }
+
+    if (this.props.addEndListener) {
+      this.props.addEndListener(node, this.nextCallback);
+    }
+
+    if (timeout != null) {
+      setTimeout(this.nextCallback, timeout);
+    }
+  };
+
+  _proto.render = function render() {
+    var status = this.state.status;
+
+    if (status === UNMOUNTED) {
+      return null;
+    }
+
+    var _this$props = this.props,
+        children = _this$props.children,
+        childProps = _objectWithoutPropertiesLoose(_this$props, ["children"]); // filter props for Transtition
+
+
+    delete childProps.in;
+    delete childProps.mountOnEnter;
+    delete childProps.unmountOnExit;
+    delete childProps.appear;
+    delete childProps.enter;
+    delete childProps.exit;
+    delete childProps.timeout;
+    delete childProps.addEndListener;
+    delete childProps.onEnter;
+    delete childProps.onEntering;
+    delete childProps.onEntered;
+    delete childProps.onExit;
+    delete childProps.onExiting;
+    delete childProps.onExited;
+
+    if (typeof children === 'function') {
+      return children(status, childProps);
+    }
+
+    var child = _react.default.Children.only(children);
+
+    return _react.default.cloneElement(child, childProps);
+  };
+
+  return Transition;
+}(_react.default.Component);
+
+Transition.contextTypes = {
+  transitionGroup: PropTypes.object
+};
+Transition.childContextTypes = {
+  transitionGroup: function transitionGroup() {}
+};
+Transition.propTypes =  true ? {
+  /**
+   * A `function` child can be used instead of a React element. This function is
+   * called with the current transition status (`'entering'`, `'entered'`,
+   * `'exiting'`, `'exited'`, `'unmounted'`), which can be used to apply context
+   * specific props to a component.
+   *
+   * ```jsx
+   * <Transition in={this.state.in} timeout={150}>
+   *   {state => (
+   *     <MyComponent className={`fade fade-${state}`} />
+   *   )}
+   * </Transition>
+   * ```
+   */
+  children: PropTypes.oneOfType([PropTypes.func.isRequired, PropTypes.element.isRequired]).isRequired,
+
+  /**
+   * Show the component; triggers the enter or exit states
+   */
+  in: PropTypes.bool,
+
+  /**
+   * By default the child component is mounted immediately along with
+   * the parent `Transition` component. If you want to "lazy mount" the component on the
+   * first `in={true}` you can set `mountOnEnter`. After the first enter transition the component will stay
+   * mounted, even on "exited", unless you also specify `unmountOnExit`.
+   */
+  mountOnEnter: PropTypes.bool,
+
+  /**
+   * By default the child component stays mounted after it reaches the `'exited'` state.
+   * Set `unmountOnExit` if you'd prefer to unmount the component after it finishes exiting.
+   */
+  unmountOnExit: PropTypes.bool,
+
+  /**
+   * Normally a component is not transitioned if it is shown when the `<Transition>` component mounts.
+   * If you want to transition on the first mount set `appear` to `true`, and the
+   * component will transition in as soon as the `<Transition>` mounts.
+   *
+   * > Note: there are no specific "appear" states. `appear` only adds an additional `enter` transition.
+   */
+  appear: PropTypes.bool,
+
+  /**
+   * Enable or disable enter transitions.
+   */
+  enter: PropTypes.bool,
+
+  /**
+   * Enable or disable exit transitions.
+   */
+  exit: PropTypes.bool,
+
+  /**
+   * The duration of the transition, in milliseconds.
+   * Required unless `addEndListener` is provided.
+   *
+   * You may specify a single timeout for all transitions:
+   *
+   * ```jsx
+   * timeout={500}
+   * ```
+   *
+   * or individually:
+   *
+   * ```jsx
+   * timeout={{
+   *  appear: 500,
+   *  enter: 300,
+   *  exit: 500,
+   * }}
+   * ```
+   *
+   * - `appear` defaults to the value of `enter`
+   * - `enter` defaults to `0`
+   * - `exit` defaults to `0`
+   *
+   * @type {number | { enter?: number, exit?: number, appear?: number }}
+   */
+  timeout: function timeout(props) {
+    var pt = _PropTypes.timeoutsShape;
+    if (!props.addEndListener) pt = pt.isRequired;
+
+    for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
+    return pt.apply(void 0, [props].concat(args));
+  },
+
+  /**
+   * Add a custom transition end trigger. Called with the transitioning
+   * DOM node and a `done` callback. Allows for more fine grained transition end
+   * logic. **Note:** Timeouts are still used as a fallback if provided.
+   *
+   * ```jsx
+   * addEndListener={(node, done) => {
+   *   // use the css transitionend event to mark the finish of a transition
+   *   node.addEventListener('transitionend', done, false);
+   * }}
+   * ```
+   */
+  addEndListener: PropTypes.func,
+
+  /**
+   * Callback fired before the "entering" status is applied. An extra parameter
+   * `isAppearing` is supplied to indicate if the enter stage is occurring on the initial mount
+   *
+   * @type Function(node: HtmlElement, isAppearing: bool) -> void
+   */
+  onEnter: PropTypes.func,
+
+  /**
+   * Callback fired after the "entering" status is applied. An extra parameter
+   * `isAppearing` is supplied to indicate if the enter stage is occurring on the initial mount
+   *
+   * @type Function(node: HtmlElement, isAppearing: bool)
+   */
+  onEntering: PropTypes.func,
+
+  /**
+   * Callback fired after the "entered" status is applied. An extra parameter
+   * `isAppearing` is supplied to indicate if the enter stage is occurring on the initial mount
+   *
+   * @type Function(node: HtmlElement, isAppearing: bool) -> void
+   */
+  onEntered: PropTypes.func,
+
+  /**
+   * Callback fired before the "exiting" status is applied.
+   *
+   * @type Function(node: HtmlElement) -> void
+   */
+  onExit: PropTypes.func,
+
+  /**
+   * Callback fired after the "exiting" status is applied.
+   *
+   * @type Function(node: HtmlElement) -> void
+   */
+  onExiting: PropTypes.func,
+
+  /**
+   * Callback fired after the "exited" status is applied.
+   *
+   * @type Function(node: HtmlElement) -> void
+   */
+  onExited: PropTypes.func // Name the function so it is clearer in the documentation
+
+} : undefined;
+
+function noop() {}
+
+Transition.defaultProps = {
+  in: false,
+  mountOnEnter: false,
+  unmountOnExit: false,
+  appear: false,
+  enter: true,
+  exit: true,
+  onEnter: noop,
+  onEntering: noop,
+  onEntered: noop,
+  onExit: noop,
+  onExiting: noop,
+  onExited: noop
+};
+Transition.UNMOUNTED = 0;
+Transition.EXITED = 1;
+Transition.ENTERING = 2;
+Transition.ENTERED = 3;
+Transition.EXITING = 4;
+
+var _default = (0, _reactLifecyclesCompat.polyfill)(Transition);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/next-page-transitions/node_modules/react-transition-group/utils/PropTypes.js":
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/next-page-transitions/node_modules/react-transition-group/utils/PropTypes.js ***!
+  \***************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.classNamesShape = exports.timeoutsShape = void 0;
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var timeoutsShape =  true ? _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.shape({
+  enter: _propTypes.default.number,
+  exit: _propTypes.default.number,
+  appear: _propTypes.default.number
+}).isRequired]) : undefined;
+exports.timeoutsShape = timeoutsShape;
+var classNamesShape =  true ? _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.shape({
+  enter: _propTypes.default.string,
+  exit: _propTypes.default.string,
+  active: _propTypes.default.string
+}), _propTypes.default.shape({
+  enter: _propTypes.default.string,
+  enterDone: _propTypes.default.string,
+  enterActive: _propTypes.default.string,
+  exit: _propTypes.default.string,
+  exitDone: _propTypes.default.string,
+  exitActive: _propTypes.default.string
+})]) : undefined;
+exports.classNamesShape = classNamesShape;
 
 /***/ }),
 
@@ -5352,1040 +6386,6 @@ function polyfill(Component) {
 
 
 
-
-/***/ }),
-
-/***/ "./node_modules/react-transition-group/CSSTransition.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/react-transition-group/CSSTransition.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.default = void 0;
-
-var PropTypes = _interopRequireWildcard(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
-
-var _addClass = _interopRequireDefault(__webpack_require__(/*! dom-helpers/class/addClass */ "./node_modules/dom-helpers/class/addClass.js"));
-
-var _removeClass = _interopRequireDefault(__webpack_require__(/*! dom-helpers/class/removeClass */ "./node_modules/dom-helpers/class/removeClass.js"));
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _Transition = _interopRequireDefault(__webpack_require__(/*! ./Transition */ "./node_modules/react-transition-group/Transition.js"));
-
-var _PropTypes = __webpack_require__(/*! ./utils/PropTypes */ "./node_modules/react-transition-group/utils/PropTypes.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
-
-var addClass = function addClass(node, classes) {
-  return node && classes && classes.split(' ').forEach(function (c) {
-    return (0, _addClass.default)(node, c);
-  });
-};
-
-var removeClass = function removeClass(node, classes) {
-  return node && classes && classes.split(' ').forEach(function (c) {
-    return (0, _removeClass.default)(node, c);
-  });
-};
-/**
- * A transition component inspired by the excellent
- * [ng-animate](http://www.nganimate.org/) library, you should use it if you're
- * using CSS transitions or animations. It's built upon the
- * [`Transition`](https://reactcommunity.org/react-transition-group/transition)
- * component, so it inherits all of its props.
- *
- * `CSSTransition` applies a pair of class names during the `appear`, `enter`,
- * and `exit` states of the transition. The first class is applied and then a
- * second `*-active` class in order to activate the CSSS transition. After the
- * transition, matching `*-done` class names are applied to persist the
- * transition state.
- *
- * ```jsx
- * function App() {
- *   const [inProp, setInProp] = useState(false);
- *   return (
- *     <div>
- *       <CSSTransition in={inProp} timeout={200} classNames="my-node">
- *         <div>
- *           {"I'll receive my-node-* classes"}
- *         </div>
- *       </CSSTransition>
- *       <button type="button" onClick={() => setInProp(true)}>
- *         Click to Enter
- *       </button>
- *     </div>
- *   );
- * }
- * ```
- *
- * When the `in` prop is set to `true`, the child component will first receive
- * the class `example-enter`, then the `example-enter-active` will be added in
- * the next tick. `CSSTransition` [forces a
- * reflow](https://github.com/reactjs/react-transition-group/blob/5007303e729a74be66a21c3e2205e4916821524b/src/CSSTransition.js#L208-L215)
- * between before adding the `example-enter-active`. This is an important trick
- * because it allows us to transition between `example-enter` and
- * `example-enter-active` even though they were added immediately one after
- * another. Most notably, this is what makes it possible for us to animate
- * _appearance_.
- *
- * ```css
- * .my-node-enter {
- *   opacity: 0;
- * }
- * .my-node-enter-active {
- *   opacity: 1;
- *   transition: opacity 200ms;
- * }
- * .my-node-exit {
- *   opacity: 1;
- * }
- * .my-node-exit-active {
- *   opacity: 0;
- *   transition: opacity: 200ms;
- * }
- * ```
- *
- * `*-active` classes represent which styles you want to animate **to**.
- */
-
-
-var CSSTransition =
-/*#__PURE__*/
-function (_React$Component) {
-  _inheritsLoose(CSSTransition, _React$Component);
-
-  function CSSTransition() {
-    var _this;
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
-
-    _this.onEnter = function (node, appearing) {
-      var _this$getClassNames = _this.getClassNames(appearing ? 'appear' : 'enter'),
-          className = _this$getClassNames.className;
-
-      _this.removeClasses(node, 'exit');
-
-      addClass(node, className);
-
-      if (_this.props.onEnter) {
-        _this.props.onEnter(node, appearing);
-      }
-    };
-
-    _this.onEntering = function (node, appearing) {
-      var _this$getClassNames2 = _this.getClassNames(appearing ? 'appear' : 'enter'),
-          activeClassName = _this$getClassNames2.activeClassName;
-
-      _this.reflowAndAddClass(node, activeClassName);
-
-      if (_this.props.onEntering) {
-        _this.props.onEntering(node, appearing);
-      }
-    };
-
-    _this.onEntered = function (node, appearing) {
-      var appearClassName = _this.getClassNames('appear').doneClassName;
-
-      var enterClassName = _this.getClassNames('enter').doneClassName;
-
-      var doneClassName = appearing ? appearClassName + " " + enterClassName : enterClassName;
-
-      _this.removeClasses(node, appearing ? 'appear' : 'enter');
-
-      addClass(node, doneClassName);
-
-      if (_this.props.onEntered) {
-        _this.props.onEntered(node, appearing);
-      }
-    };
-
-    _this.onExit = function (node) {
-      var _this$getClassNames3 = _this.getClassNames('exit'),
-          className = _this$getClassNames3.className;
-
-      _this.removeClasses(node, 'appear');
-
-      _this.removeClasses(node, 'enter');
-
-      addClass(node, className);
-
-      if (_this.props.onExit) {
-        _this.props.onExit(node);
-      }
-    };
-
-    _this.onExiting = function (node) {
-      var _this$getClassNames4 = _this.getClassNames('exit'),
-          activeClassName = _this$getClassNames4.activeClassName;
-
-      _this.reflowAndAddClass(node, activeClassName);
-
-      if (_this.props.onExiting) {
-        _this.props.onExiting(node);
-      }
-    };
-
-    _this.onExited = function (node) {
-      var _this$getClassNames5 = _this.getClassNames('exit'),
-          doneClassName = _this$getClassNames5.doneClassName;
-
-      _this.removeClasses(node, 'exit');
-
-      addClass(node, doneClassName);
-
-      if (_this.props.onExited) {
-        _this.props.onExited(node);
-      }
-    };
-
-    _this.getClassNames = function (type) {
-      var classNames = _this.props.classNames;
-      var isStringClassNames = typeof classNames === 'string';
-      var prefix = isStringClassNames && classNames ? classNames + '-' : '';
-      var className = isStringClassNames ? prefix + type : classNames[type];
-      var activeClassName = isStringClassNames ? className + '-active' : classNames[type + 'Active'];
-      var doneClassName = isStringClassNames ? className + '-done' : classNames[type + 'Done'];
-      return {
-        className: className,
-        activeClassName: activeClassName,
-        doneClassName: doneClassName
-      };
-    };
-
-    return _this;
-  }
-
-  var _proto = CSSTransition.prototype;
-
-  _proto.removeClasses = function removeClasses(node, type) {
-    var _this$getClassNames6 = this.getClassNames(type),
-        className = _this$getClassNames6.className,
-        activeClassName = _this$getClassNames6.activeClassName,
-        doneClassName = _this$getClassNames6.doneClassName;
-
-    className && removeClass(node, className);
-    activeClassName && removeClass(node, activeClassName);
-    doneClassName && removeClass(node, doneClassName);
-  };
-
-  _proto.reflowAndAddClass = function reflowAndAddClass(node, className) {
-    // This is for to force a repaint,
-    // which is necessary in order to transition styles when adding a class name.
-    if (className) {
-      /* eslint-disable no-unused-expressions */
-      node && node.scrollTop;
-      /* eslint-enable no-unused-expressions */
-
-      addClass(node, className);
-    }
-  };
-
-  _proto.render = function render() {
-    var props = _extends({}, this.props);
-
-    delete props.classNames;
-    return _react.default.createElement(_Transition.default, _extends({}, props, {
-      onEnter: this.onEnter,
-      onEntered: this.onEntered,
-      onEntering: this.onEntering,
-      onExit: this.onExit,
-      onExiting: this.onExiting,
-      onExited: this.onExited
-    }));
-  };
-
-  return CSSTransition;
-}(_react.default.Component);
-
-CSSTransition.defaultProps = {
-  classNames: ''
-};
-CSSTransition.propTypes =  true ? _extends({}, _Transition.default.propTypes, {
-  /**
-   * The animation classNames applied to the component as it enters, exits or
-   * has finished the transition. A single name can be provided and it will be
-   * suffixed for each stage: e.g.
-   *
-   * `classNames="fade"` applies `fade-enter`, `fade-enter-active`,
-   * `fade-enter-done`, `fade-exit`, `fade-exit-active`, `fade-exit-done`,
-   * `fade-appear`, `fade-appear-active`, and `fade-appear-done`.
-   *
-   * **Note**: `fade-appear-done` and `fade-enter-done` will _both_ be applied.
-   * This allows you to define different behavior for when appearing is done and
-   * when regular entering is done, using selectors like
-   * `.fade-enter-done:not(.fade-appear-done)`. For example, you could apply an
-   * epic entrance animation when element first appears in the DOM using
-   * [Animate.css](https://daneden.github.io/animate.css/). Otherwise you can
-   * simply use `fade-enter-done` for defining both cases.
-   *
-   * Each individual classNames can also be specified independently like:
-   *
-   * ```js
-   * classNames={{
-   *  appear: 'my-appear',
-   *  appearActive: 'my-active-appear',
-   *  appearDone: 'my-done-appear',
-   *  enter: 'my-enter',
-   *  enterActive: 'my-active-enter',
-   *  enterDone: 'my-done-enter',
-   *  exit: 'my-exit',
-   *  exitActive: 'my-active-exit',
-   *  exitDone: 'my-done-exit',
-   * }}
-   * ```
-   *
-   * If you want to set these classes using CSS Modules:
-   *
-   * ```js
-   * import styles from './styles.css';
-   * ```
-   *
-   * you might want to use camelCase in your CSS file, that way could simply
-   * spread them instead of listing them one by one:
-   *
-   * ```js
-   * classNames={{ ...styles }}
-   * ```
-   *
-   * @type {string | {
-   *  appear?: string,
-   *  appearActive?: string,
-   *  appearDone?: string,
-   *  enter?: string,
-   *  enterActive?: string,
-   *  enterDone?: string,
-   *  exit?: string,
-   *  exitActive?: string,
-   *  exitDone?: string,
-   * }}
-   */
-  classNames: _PropTypes.classNamesShape,
-
-  /**
-   * A `<Transition>` callback fired immediately after the 'enter' or 'appear' class is
-   * applied.
-   *
-   * @type Function(node: HtmlElement, isAppearing: bool)
-   */
-  onEnter: PropTypes.func,
-
-  /**
-   * A `<Transition>` callback fired immediately after the 'enter-active' or
-   * 'appear-active' class is applied.
-   *
-   * @type Function(node: HtmlElement, isAppearing: bool)
-   */
-  onEntering: PropTypes.func,
-
-  /**
-   * A `<Transition>` callback fired immediately after the 'enter' or
-   * 'appear' classes are **removed** and the `done` class is added to the DOM node.
-   *
-   * @type Function(node: HtmlElement, isAppearing: bool)
-   */
-  onEntered: PropTypes.func,
-
-  /**
-   * A `<Transition>` callback fired immediately after the 'exit' class is
-   * applied.
-   *
-   * @type Function(node: HtmlElement)
-   */
-  onExit: PropTypes.func,
-
-  /**
-   * A `<Transition>` callback fired immediately after the 'exit-active' is applied.
-   *
-   * @type Function(node: HtmlElement)
-   */
-  onExiting: PropTypes.func,
-
-  /**
-   * A `<Transition>` callback fired immediately after the 'exit' classes
-   * are **removed** and the `exit-done` class is added to the DOM node.
-   *
-   * @type Function(node: HtmlElement)
-   */
-  onExited: PropTypes.func
-}) : undefined;
-var _default = CSSTransition;
-exports.default = _default;
-module.exports = exports["default"];
-
-/***/ }),
-
-/***/ "./node_modules/react-transition-group/Transition.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/react-transition-group/Transition.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.default = exports.EXITING = exports.ENTERED = exports.ENTERING = exports.EXITED = exports.UNMOUNTED = void 0;
-
-var PropTypes = _interopRequireWildcard(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _reactDom = _interopRequireDefault(__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"));
-
-var _reactLifecyclesCompat = __webpack_require__(/*! react-lifecycles-compat */ "./node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js");
-
-var _PropTypes = __webpack_require__(/*! ./utils/PropTypes */ "./node_modules/react-transition-group/utils/PropTypes.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
-
-var UNMOUNTED = 'unmounted';
-exports.UNMOUNTED = UNMOUNTED;
-var EXITED = 'exited';
-exports.EXITED = EXITED;
-var ENTERING = 'entering';
-exports.ENTERING = ENTERING;
-var ENTERED = 'entered';
-exports.ENTERED = ENTERED;
-var EXITING = 'exiting';
-/**
- * The Transition component lets you describe a transition from one component
- * state to another _over time_ with a simple declarative API. Most commonly
- * it's used to animate the mounting and unmounting of a component, but can also
- * be used to describe in-place transition states as well.
- *
- * ---
- *
- * **Note**: `Transition` is a platform-agnostic base component. If you're using
- * transitions in CSS, you'll probably want to use
- * [`CSSTransition`](https://reactcommunity.org/react-transition-group/css-transition)
- * instead. It inherits all the features of `Transition`, but contains
- * additional features necessary to play nice with CSS transitions (hence the
- * name of the component).
- *
- * ---
- *
- * By default the `Transition` component does not alter the behavior of the
- * component it renders, it only tracks "enter" and "exit" states for the
- * components. It's up to you to give meaning and effect to those states. For
- * example we can add styles to a component when it enters or exits:
- *
- * ```jsx
- * import { Transition } from 'react-transition-group';
- *
- * const duration = 300;
- *
- * const defaultStyle = {
- *   transition: `opacity ${duration}ms ease-in-out`,
- *   opacity: 0,
- * }
- *
- * const transitionStyles = {
- *   entering: { opacity: 0 },
- *   entered:  { opacity: 1 },
- * };
- *
- * const Fade = ({ in: inProp }) => (
- *   <Transition in={inProp} timeout={duration}>
- *     {state => (
- *       <div style={{
- *         ...defaultStyle,
- *         ...transitionStyles[state]
- *       }}>
- *         I'm a fade Transition!
- *       </div>
- *     )}
- *   </Transition>
- * );
- * ```
- *
- * There are 4 main states a Transition can be in:
- *  - `'entering'`
- *  - `'entered'`
- *  - `'exiting'`
- *  - `'exited'`
- *
- * Transition state is toggled via the `in` prop. When `true` the component
- * begins the "Enter" stage. During this stage, the component will shift from
- * its current transition state, to `'entering'` for the duration of the
- * transition and then to the `'entered'` stage once it's complete. Let's take
- * the following example (we'll use the
- * [useState](https://reactjs.org/docs/hooks-reference.html#usestate) hook):
- *
- * ```jsx
- * function App() {
- *   const [inProp, setInProp] = useState(false);
- *   return (
- *     <div>
- *       <Transition in={inProp} timeout={500}>
- *         {state => (
- *           // ...
- *         )}
- *       </Transition>
- *       <button onClick={() => setInProp(true)}>
- *         Click to Enter
- *       </button>
- *     </div>
- *   );
- * }
- * ```
- *
- * When the button is clicked the component will shift to the `'entering'` state
- * and stay there for 500ms (the value of `timeout`) before it finally switches
- * to `'entered'`.
- *
- * When `in` is `false` the same thing happens except the state moves from
- * `'exiting'` to `'exited'`.
- */
-
-exports.EXITING = EXITING;
-
-var Transition =
-/*#__PURE__*/
-function (_React$Component) {
-  _inheritsLoose(Transition, _React$Component);
-
-  function Transition(props, context) {
-    var _this;
-
-    _this = _React$Component.call(this, props, context) || this;
-    var parentGroup = context.transitionGroup; // In the context of a TransitionGroup all enters are really appears
-
-    var appear = parentGroup && !parentGroup.isMounting ? props.enter : props.appear;
-    var initialStatus;
-    _this.appearStatus = null;
-
-    if (props.in) {
-      if (appear) {
-        initialStatus = EXITED;
-        _this.appearStatus = ENTERING;
-      } else {
-        initialStatus = ENTERED;
-      }
-    } else {
-      if (props.unmountOnExit || props.mountOnEnter) {
-        initialStatus = UNMOUNTED;
-      } else {
-        initialStatus = EXITED;
-      }
-    }
-
-    _this.state = {
-      status: initialStatus
-    };
-    _this.nextCallback = null;
-    return _this;
-  }
-
-  var _proto = Transition.prototype;
-
-  _proto.getChildContext = function getChildContext() {
-    return {
-      transitionGroup: null // allows for nested Transitions
-
-    };
-  };
-
-  Transition.getDerivedStateFromProps = function getDerivedStateFromProps(_ref, prevState) {
-    var nextIn = _ref.in;
-
-    if (nextIn && prevState.status === UNMOUNTED) {
-      return {
-        status: EXITED
-      };
-    }
-
-    return null;
-  }; // getSnapshotBeforeUpdate(prevProps) {
-  //   let nextStatus = null
-  //   if (prevProps !== this.props) {
-  //     const { status } = this.state
-  //     if (this.props.in) {
-  //       if (status !== ENTERING && status !== ENTERED) {
-  //         nextStatus = ENTERING
-  //       }
-  //     } else {
-  //       if (status === ENTERING || status === ENTERED) {
-  //         nextStatus = EXITING
-  //       }
-  //     }
-  //   }
-  //   return { nextStatus }
-  // }
-
-
-  _proto.componentDidMount = function componentDidMount() {
-    this.updateStatus(true, this.appearStatus);
-  };
-
-  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
-    var nextStatus = null;
-
-    if (prevProps !== this.props) {
-      var status = this.state.status;
-
-      if (this.props.in) {
-        if (status !== ENTERING && status !== ENTERED) {
-          nextStatus = ENTERING;
-        }
-      } else {
-        if (status === ENTERING || status === ENTERED) {
-          nextStatus = EXITING;
-        }
-      }
-    }
-
-    this.updateStatus(false, nextStatus);
-  };
-
-  _proto.componentWillUnmount = function componentWillUnmount() {
-    this.cancelNextCallback();
-  };
-
-  _proto.getTimeouts = function getTimeouts() {
-    var timeout = this.props.timeout;
-    var exit, enter, appear;
-    exit = enter = appear = timeout;
-
-    if (timeout != null && typeof timeout !== 'number') {
-      exit = timeout.exit;
-      enter = timeout.enter; // TODO: remove fallback for next major
-
-      appear = timeout.appear !== undefined ? timeout.appear : enter;
-    }
-
-    return {
-      exit: exit,
-      enter: enter,
-      appear: appear
-    };
-  };
-
-  _proto.updateStatus = function updateStatus(mounting, nextStatus) {
-    if (mounting === void 0) {
-      mounting = false;
-    }
-
-    if (nextStatus !== null) {
-      // nextStatus will always be ENTERING or EXITING.
-      this.cancelNextCallback();
-
-      var node = _reactDom.default.findDOMNode(this);
-
-      if (nextStatus === ENTERING) {
-        this.performEnter(node, mounting);
-      } else {
-        this.performExit(node);
-      }
-    } else if (this.props.unmountOnExit && this.state.status === EXITED) {
-      this.setState({
-        status: UNMOUNTED
-      });
-    }
-  };
-
-  _proto.performEnter = function performEnter(node, mounting) {
-    var _this2 = this;
-
-    var enter = this.props.enter;
-    var appearing = this.context.transitionGroup ? this.context.transitionGroup.isMounting : mounting;
-    var timeouts = this.getTimeouts();
-    var enterTimeout = appearing ? timeouts.appear : timeouts.enter; // no enter animation skip right to ENTERED
-    // if we are mounting and running this it means appear _must_ be set
-
-    if (!mounting && !enter) {
-      this.safeSetState({
-        status: ENTERED
-      }, function () {
-        _this2.props.onEntered(node);
-      });
-      return;
-    }
-
-    this.props.onEnter(node, appearing);
-    this.safeSetState({
-      status: ENTERING
-    }, function () {
-      _this2.props.onEntering(node, appearing);
-
-      _this2.onTransitionEnd(node, enterTimeout, function () {
-        _this2.safeSetState({
-          status: ENTERED
-        }, function () {
-          _this2.props.onEntered(node, appearing);
-        });
-      });
-    });
-  };
-
-  _proto.performExit = function performExit(node) {
-    var _this3 = this;
-
-    var exit = this.props.exit;
-    var timeouts = this.getTimeouts(); // no exit animation skip right to EXITED
-
-    if (!exit) {
-      this.safeSetState({
-        status: EXITED
-      }, function () {
-        _this3.props.onExited(node);
-      });
-      return;
-    }
-
-    this.props.onExit(node);
-    this.safeSetState({
-      status: EXITING
-    }, function () {
-      _this3.props.onExiting(node);
-
-      _this3.onTransitionEnd(node, timeouts.exit, function () {
-        _this3.safeSetState({
-          status: EXITED
-        }, function () {
-          _this3.props.onExited(node);
-        });
-      });
-    });
-  };
-
-  _proto.cancelNextCallback = function cancelNextCallback() {
-    if (this.nextCallback !== null) {
-      this.nextCallback.cancel();
-      this.nextCallback = null;
-    }
-  };
-
-  _proto.safeSetState = function safeSetState(nextState, callback) {
-    // This shouldn't be necessary, but there are weird race conditions with
-    // setState callbacks and unmounting in testing, so always make sure that
-    // we can cancel any pending setState callbacks after we unmount.
-    callback = this.setNextCallback(callback);
-    this.setState(nextState, callback);
-  };
-
-  _proto.setNextCallback = function setNextCallback(callback) {
-    var _this4 = this;
-
-    var active = true;
-
-    this.nextCallback = function (event) {
-      if (active) {
-        active = false;
-        _this4.nextCallback = null;
-        callback(event);
-      }
-    };
-
-    this.nextCallback.cancel = function () {
-      active = false;
-    };
-
-    return this.nextCallback;
-  };
-
-  _proto.onTransitionEnd = function onTransitionEnd(node, timeout, handler) {
-    this.setNextCallback(handler);
-    var doesNotHaveTimeoutOrListener = timeout == null && !this.props.addEndListener;
-
-    if (!node || doesNotHaveTimeoutOrListener) {
-      setTimeout(this.nextCallback, 0);
-      return;
-    }
-
-    if (this.props.addEndListener) {
-      this.props.addEndListener(node, this.nextCallback);
-    }
-
-    if (timeout != null) {
-      setTimeout(this.nextCallback, timeout);
-    }
-  };
-
-  _proto.render = function render() {
-    var status = this.state.status;
-
-    if (status === UNMOUNTED) {
-      return null;
-    }
-
-    var _this$props = this.props,
-        children = _this$props.children,
-        childProps = _objectWithoutPropertiesLoose(_this$props, ["children"]); // filter props for Transtition
-
-
-    delete childProps.in;
-    delete childProps.mountOnEnter;
-    delete childProps.unmountOnExit;
-    delete childProps.appear;
-    delete childProps.enter;
-    delete childProps.exit;
-    delete childProps.timeout;
-    delete childProps.addEndListener;
-    delete childProps.onEnter;
-    delete childProps.onEntering;
-    delete childProps.onEntered;
-    delete childProps.onExit;
-    delete childProps.onExiting;
-    delete childProps.onExited;
-
-    if (typeof children === 'function') {
-      return children(status, childProps);
-    }
-
-    var child = _react.default.Children.only(children);
-
-    return _react.default.cloneElement(child, childProps);
-  };
-
-  return Transition;
-}(_react.default.Component);
-
-Transition.contextTypes = {
-  transitionGroup: PropTypes.object
-};
-Transition.childContextTypes = {
-  transitionGroup: function transitionGroup() {}
-};
-Transition.propTypes =  true ? {
-  /**
-   * A `function` child can be used instead of a React element. This function is
-   * called with the current transition status (`'entering'`, `'entered'`,
-   * `'exiting'`, `'exited'`, `'unmounted'`), which can be used to apply context
-   * specific props to a component.
-   *
-   * ```jsx
-   * <Transition in={this.state.in} timeout={150}>
-   *   {state => (
-   *     <MyComponent className={`fade fade-${state}`} />
-   *   )}
-   * </Transition>
-   * ```
-   */
-  children: PropTypes.oneOfType([PropTypes.func.isRequired, PropTypes.element.isRequired]).isRequired,
-
-  /**
-   * Show the component; triggers the enter or exit states
-   */
-  in: PropTypes.bool,
-
-  /**
-   * By default the child component is mounted immediately along with
-   * the parent `Transition` component. If you want to "lazy mount" the component on the
-   * first `in={true}` you can set `mountOnEnter`. After the first enter transition the component will stay
-   * mounted, even on "exited", unless you also specify `unmountOnExit`.
-   */
-  mountOnEnter: PropTypes.bool,
-
-  /**
-   * By default the child component stays mounted after it reaches the `'exited'` state.
-   * Set `unmountOnExit` if you'd prefer to unmount the component after it finishes exiting.
-   */
-  unmountOnExit: PropTypes.bool,
-
-  /**
-   * Normally a component is not transitioned if it is shown when the `<Transition>` component mounts.
-   * If you want to transition on the first mount set `appear` to `true`, and the
-   * component will transition in as soon as the `<Transition>` mounts.
-   *
-   * > Note: there are no specific "appear" states. `appear` only adds an additional `enter` transition.
-   */
-  appear: PropTypes.bool,
-
-  /**
-   * Enable or disable enter transitions.
-   */
-  enter: PropTypes.bool,
-
-  /**
-   * Enable or disable exit transitions.
-   */
-  exit: PropTypes.bool,
-
-  /**
-   * The duration of the transition, in milliseconds.
-   * Required unless `addEndListener` is provided.
-   *
-   * You may specify a single timeout for all transitions:
-   *
-   * ```jsx
-   * timeout={500}
-   * ```
-   *
-   * or individually:
-   *
-   * ```jsx
-   * timeout={{
-   *  appear: 500,
-   *  enter: 300,
-   *  exit: 500,
-   * }}
-   * ```
-   *
-   * - `appear` defaults to the value of `enter`
-   * - `enter` defaults to `0`
-   * - `exit` defaults to `0`
-   *
-   * @type {number | { enter?: number, exit?: number, appear?: number }}
-   */
-  timeout: function timeout(props) {
-    var pt = _PropTypes.timeoutsShape;
-    if (!props.addEndListener) pt = pt.isRequired;
-
-    for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      args[_key - 1] = arguments[_key];
-    }
-
-    return pt.apply(void 0, [props].concat(args));
-  },
-
-  /**
-   * Add a custom transition end trigger. Called with the transitioning
-   * DOM node and a `done` callback. Allows for more fine grained transition end
-   * logic. **Note:** Timeouts are still used as a fallback if provided.
-   *
-   * ```jsx
-   * addEndListener={(node, done) => {
-   *   // use the css transitionend event to mark the finish of a transition
-   *   node.addEventListener('transitionend', done, false);
-   * }}
-   * ```
-   */
-  addEndListener: PropTypes.func,
-
-  /**
-   * Callback fired before the "entering" status is applied. An extra parameter
-   * `isAppearing` is supplied to indicate if the enter stage is occurring on the initial mount
-   *
-   * @type Function(node: HtmlElement, isAppearing: bool) -> void
-   */
-  onEnter: PropTypes.func,
-
-  /**
-   * Callback fired after the "entering" status is applied. An extra parameter
-   * `isAppearing` is supplied to indicate if the enter stage is occurring on the initial mount
-   *
-   * @type Function(node: HtmlElement, isAppearing: bool)
-   */
-  onEntering: PropTypes.func,
-
-  /**
-   * Callback fired after the "entered" status is applied. An extra parameter
-   * `isAppearing` is supplied to indicate if the enter stage is occurring on the initial mount
-   *
-   * @type Function(node: HtmlElement, isAppearing: bool) -> void
-   */
-  onEntered: PropTypes.func,
-
-  /**
-   * Callback fired before the "exiting" status is applied.
-   *
-   * @type Function(node: HtmlElement) -> void
-   */
-  onExit: PropTypes.func,
-
-  /**
-   * Callback fired after the "exiting" status is applied.
-   *
-   * @type Function(node: HtmlElement) -> void
-   */
-  onExiting: PropTypes.func,
-
-  /**
-   * Callback fired after the "exited" status is applied.
-   *
-   * @type Function(node: HtmlElement) -> void
-   */
-  onExited: PropTypes.func // Name the function so it is clearer in the documentation
-
-} : undefined;
-
-function noop() {}
-
-Transition.defaultProps = {
-  in: false,
-  mountOnEnter: false,
-  unmountOnExit: false,
-  appear: false,
-  enter: true,
-  exit: true,
-  onEnter: noop,
-  onEntering: noop,
-  onEntered: noop,
-  onExit: noop,
-  onExiting: noop,
-  onExited: noop
-};
-Transition.UNMOUNTED = 0;
-Transition.EXITED = 1;
-Transition.ENTERING = 2;
-Transition.ENTERED = 3;
-Transition.EXITING = 4;
-
-var _default = (0, _reactLifecyclesCompat.polyfill)(Transition);
-
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/react-transition-group/utils/PropTypes.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/react-transition-group/utils/PropTypes.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.classNamesShape = exports.timeoutsShape = void 0;
-
-var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var timeoutsShape =  true ? _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.shape({
-  enter: _propTypes.default.number,
-  exit: _propTypes.default.number,
-  appear: _propTypes.default.number
-}).isRequired]) : undefined;
-exports.timeoutsShape = timeoutsShape;
-var classNamesShape =  true ? _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.shape({
-  enter: _propTypes.default.string,
-  exit: _propTypes.default.string,
-  active: _propTypes.default.string
-}), _propTypes.default.shape({
-  enter: _propTypes.default.string,
-  enterDone: _propTypes.default.string,
-  enterActive: _propTypes.default.string,
-  exit: _propTypes.default.string,
-  exitDone: _propTypes.default.string,
-  exitActive: _propTypes.default.string
-})]) : undefined;
-exports.classNamesShape = classNamesShape;
 
 /***/ }),
 

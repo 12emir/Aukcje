@@ -88,10 +88,142 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./components/PhotoSlider.js":
+/*!***********************************!*\
+  !*** ./components/PhotoSlider.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_swipe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-swipe */ "react-swipe");
+/* harmony import */ var react_swipe__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_swipe__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-icons/fa */ "react-icons/fa");
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/kozakiewicz/Desktop/aukcje-app/components/PhotoSlider.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const PhotoSlider = () => {
+  let reactSwipeEl;
+  return __jsx("div", {
+    className: "relative ",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 5
+    }
+  }, __jsx(react_swipe__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    className: "carousel ",
+    swipeOptions: {
+      continuous: true,
+      auto: 3000,
+      speed: 500
+    },
+    ref: el => reactSwipeEl = el,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 7
+    }
+  }, __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 9
+    }
+  }, __jsx("img", {
+    className: "main-img rounded-lg  ",
+    src: "/images/04.jpg",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 11
+    }
+  })), __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 9
+    }
+  }, __jsx("img", {
+    className: "main-img rounded-lg ",
+    src: "/images/04.jpg",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 11
+    }
+  })), __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 9
+    }
+  }, __jsx("img", {
+    className: "main-img rounded-lg  ",
+    src: "/images/04.jpg",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 11
+    }
+  }))), __jsx("button", {
+    className: "btn-nav next",
+    onClick: () => reactSwipeEl.next(),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 7
+    }
+  }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaLongArrowAltRight"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 9
+    }
+  })), __jsx("button", {
+    className: "btn-nav prev",
+    onClick: () => reactSwipeEl.prev(),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 7
+    }
+  }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__["FaLongArrowAltLeft"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32,
+      columnNumber: 9
+    }
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PhotoSlider);
+
+/***/ }),
 
 /***/ "./components/Timer.js":
 /*!*****************************!*\
@@ -268,8 +400,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "gsap");
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(gsap__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Timer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Timer */ "./components/Timer.js");
+/* harmony import */ var _components_PhotoSlider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/PhotoSlider */ "./components/PhotoSlider.js");
 var _jsxFileName = "/Users/kozakiewicz/Desktop/aukcje-app/pages/aukcje/[id].js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -288,10 +422,13 @@ const Auction = () => {
     }).then(json => {
       setSingle(json);
     }).then(() => {
-      gsap__WEBPACK_IMPORTED_MODULE_1___default.a.from(".main-img", {
+      gsap__WEBPACK_IMPORTED_MODULE_1___default.a.fromTo(".carousel", {
         duration: 0.4,
         opacity: 0,
         x: -100
+      }, {
+        opacity: 1,
+        x: 0
       });
     });
   }, []);
@@ -300,7 +437,7 @@ const Auction = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 27,
       columnNumber: 5
     }
   }, __jsx("div", {
@@ -308,40 +445,54 @@ const Auction = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 28,
       columnNumber: 7
     }
-  }, __jsx("img", {
-    className: "main-img rounded-lg shadow-2xl ",
-    src: "/images/item.png",
+  }, __jsx("div", {
+    className: "slider",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 29,
       columnNumber: 9
     }
-  })), __jsx("div", {
-    className: "w-1/2  p-4 ",
+  }, __jsx(_components_PhotoSlider__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30,
+      columnNumber: 11
+    }
+  }))), __jsx("div", {
+    className: "w-1/2  p-4 ",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33,
       columnNumber: 7
     }
-  }, __jsx(_components_Timer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, __jsx("h3", {
+    className: "text-purple-600  mb-2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34,
+      columnNumber: 9
+    }
+  }, "Live draw in"), __jsx(_components_Timer__WEBPACK_IMPORTED_MODULE_2__["default"], {
     date: "2020-09-01T01:02:03",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 35,
       columnNumber: 9
     }
   }), __jsx("h1", {
-    className: "h text-purple-500 text-xl",
+    className: "h text-purple-600 text-lg font-semibold py-3",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 36,
       columnNumber: 9
     }
   }, single.title), __jsx("p", {
@@ -349,7 +500,7 @@ const Auction = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 39,
       columnNumber: 9
     }
   }, single.body)));
@@ -359,7 +510,7 @@ const Auction = () => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!************************************!*\
   !*** multi ./pages/aukcje/[id].js ***!
   \************************************/
@@ -401,6 +552,28 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-countdown");
+
+/***/ }),
+
+/***/ "react-icons/fa":
+/*!*********************************!*\
+  !*** external "react-icons/fa" ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-icons/fa");
+
+/***/ }),
+
+/***/ "react-swipe":
+/*!******************************!*\
+  !*** external "react-swipe" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-swipe");
 
 /***/ })
 

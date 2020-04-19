@@ -28,11 +28,15 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/how-to": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/index": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/next/dist/pages/_error": [
+    "/live-competitions": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
